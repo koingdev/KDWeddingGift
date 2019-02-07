@@ -12,6 +12,23 @@
 		A2E7F71B220C772F00D047BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* Main.storyboard */; };
 		A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71C220C773000D047BE /* Assets.xcassets */; };
 		A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */; };
+		A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72B220C784E00D047BE /* UITextFieldX.swift */; };
+		A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72D220C784E00D047BE /* UITableViewX.swift */; };
+		A2E7F740220C784E00D047BE /* UIScrollViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72E220C784E00D047BE /* UIScrollViewX.swift */; };
+		A2E7F741220C784E00D047BE /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72F220C784E00D047BE /* UIButtonX.swift */; };
+		A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F730220C784E00D047BE /* UILabelX.swift */; };
+		A2E7F743220C784E00D047BE /* UIViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F731220C784E00D047BE /* UIViewControllerX.swift */; };
+		A2E7F744220C784E00D047BE /* StringX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F732220C784E00D047BE /* StringX.swift */; };
+		A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F733220C784E00D047BE /* UIViewX.swift */; };
+		A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */; };
+		A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F736220C784E00D047BE /* KeyboardService.swift */; };
+		A2E7F748220C784E00D047BE /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F737220C784E00D047BE /* NetworkListener.swift */; };
+		A2E7F749220C784E00D047BE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F738220C784E00D047BE /* Log.swift */; };
+		A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F739220C784E00D047BE /* EmojiString.swift */; };
+		A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73A220C784E00D047BE /* VolumeService.swift */; };
+		A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73B220C784E00D047BE /* WeakObj.swift */; };
+		A2E7F74D220C784E00D047BE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73C220C784E00D047BE /* Queue.swift */; };
+		A2E7F74E220C784E00D047BE /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73D220C784E00D047BE /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +39,23 @@
 		A2E7F71C220C773000D047BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2E7F71F220C773000D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2E7F721220C773000D047BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E7F72B220C784E00D047BE /* UITextFieldX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
+		A2E7F72D220C784E00D047BE /* UITableViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewX.swift; sourceTree = "<group>"; };
+		A2E7F72E220C784E00D047BE /* UIScrollViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewX.swift; sourceTree = "<group>"; };
+		A2E7F72F220C784E00D047BE /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		A2E7F730220C784E00D047BE /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
+		A2E7F731220C784E00D047BE /* UIViewControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerX.swift; sourceTree = "<group>"; };
+		A2E7F732220C784E00D047BE /* StringX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringX.swift; sourceTree = "<group>"; };
+		A2E7F733220C784E00D047BE /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerX.swift; sourceTree = "<group>"; };
+		A2E7F736220C784E00D047BE /* KeyboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
+		A2E7F737220C784E00D047BE /* NetworkListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
+		A2E7F738220C784E00D047BE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A2E7F739220C784E00D047BE /* EmojiString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiString.swift; sourceTree = "<group>"; };
+		A2E7F73A220C784E00D047BE /* VolumeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeService.swift; sourceTree = "<group>"; };
+		A2E7F73B220C784E00D047BE /* WeakObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObj.swift; sourceTree = "<group>"; };
+		A2E7F73C220C784E00D047BE /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		A2E7F73D220C784E00D047BE /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,7 @@
 		A2E7F714220C772F00D047BE /* KDWeddingGift */ = {
 			isa = PBXGroup;
 			children = (
+				A2E7F729220C784E00D047BE /* KDSwiftUtilities */,
 				A2E7F715220C772F00D047BE /* AppDelegate.swift */,
 				A2E7F717220C772F00D047BE /* ViewController.swift */,
 				A2E7F719220C772F00D047BE /* Main.storyboard */,
@@ -62,6 +97,55 @@
 				A2E7F721220C773000D047BE /* Info.plist */,
 			);
 			path = KDWeddingGift;
+			sourceTree = "<group>";
+		};
+		A2E7F729220C784E00D047BE /* KDSwiftUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F72A220C784E00D047BE /* DesignableX */,
+				A2E7F72C220C784E00D047BE /* Extensions */,
+				A2E7F735220C784E00D047BE /* Utilities */,
+			);
+			name = KDSwiftUtilities;
+			path = ../../KDSwiftUtilities;
+			sourceTree = "<group>";
+		};
+		A2E7F72A220C784E00D047BE /* DesignableX */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F72B220C784E00D047BE /* UITextFieldX.swift */,
+			);
+			path = DesignableX;
+			sourceTree = "<group>";
+		};
+		A2E7F72C220C784E00D047BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F72D220C784E00D047BE /* UITableViewX.swift */,
+				A2E7F72E220C784E00D047BE /* UIScrollViewX.swift */,
+				A2E7F72F220C784E00D047BE /* UIButtonX.swift */,
+				A2E7F730220C784E00D047BE /* UILabelX.swift */,
+				A2E7F731220C784E00D047BE /* UIViewControllerX.swift */,
+				A2E7F732220C784E00D047BE /* StringX.swift */,
+				A2E7F733220C784E00D047BE /* UIViewX.swift */,
+				A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A2E7F735220C784E00D047BE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F736220C784E00D047BE /* KeyboardService.swift */,
+				A2E7F737220C784E00D047BE /* NetworkListener.swift */,
+				A2E7F738220C784E00D047BE /* Log.swift */,
+				A2E7F739220C784E00D047BE /* EmojiString.swift */,
+				A2E7F73A220C784E00D047BE /* VolumeService.swift */,
+				A2E7F73B220C784E00D047BE /* WeakObj.swift */,
+				A2E7F73C220C784E00D047BE /* Queue.swift */,
+				A2E7F73D220C784E00D047BE /* Helper.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +219,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */,
+				A2E7F744220C784E00D047BE /* StringX.swift in Sources */,
 				A2E7F718220C772F00D047BE /* ViewController.swift in Sources */,
+				A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */,
+				A2E7F741220C784E00D047BE /* UIButtonX.swift in Sources */,
+				A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */,
+				A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */,
+				A2E7F74D220C784E00D047BE /* Queue.swift in Sources */,
+				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
+				A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */,
+				A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */,
+				A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */,
+				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
+				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
+				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,
 				A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */,
+				A2E7F740220C784E00D047BE /* UIScrollViewX.swift in Sources */,
+				A2E7F743220C784E00D047BE /* UIViewControllerX.swift in Sources */,
+				A2E7F748220C784E00D047BE /* NetworkListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
