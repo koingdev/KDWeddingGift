@@ -1,0 +1,6 @@
+framework module Pods_KDWeddingGift {
+  umbrella header "Pods-KDWeddingGift-umbrella.h"
+
+  export *
+  module * { export * }
+}

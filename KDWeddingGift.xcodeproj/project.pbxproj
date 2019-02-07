@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F54B46D39D7584934F196E2 /* Pods_KDWeddingGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */; };
 		A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F715220C772F00D047BE /* AppDelegate.swift */; };
-		A2E7F718220C772F00D047BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* ViewController.swift */; };
-		A2E7F71B220C772F00D047BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* Main.storyboard */; };
+		A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* MainTabBar.swift */; };
+		A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* MainTabBar.storyboard */; };
 		A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71C220C773000D047BE /* Assets.xcassets */; };
 		A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */; };
 		A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72B220C784E00D047BE /* UITextFieldX.swift */; };
@@ -22,20 +23,30 @@
 		A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F733220C784E00D047BE /* UIViewX.swift */; };
 		A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */; };
 		A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F736220C784E00D047BE /* KeyboardService.swift */; };
-		A2E7F748220C784E00D047BE /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F737220C784E00D047BE /* NetworkListener.swift */; };
 		A2E7F749220C784E00D047BE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F738220C784E00D047BE /* Log.swift */; };
 		A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F739220C784E00D047BE /* EmojiString.swift */; };
 		A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73A220C784E00D047BE /* VolumeService.swift */; };
 		A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73B220C784E00D047BE /* WeakObj.swift */; };
 		A2E7F74D220C784E00D047BE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73C220C784E00D047BE /* Queue.swift */; };
 		A2E7F74E220C784E00D047BE /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F73D220C784E00D047BE /* Helper.swift */; };
+		A2E7F752220C93E000D047BE /* WeddingGiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F751220C93E000D047BE /* WeddingGiftVC.swift */; };
+		A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */; };
+		A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F756220C97FD00D047BE /* QRScannerVC.swift */; };
+		A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F758220C981500D047BE /* QRScannerVC.storyboard */; };
+		A2E7F75C220C9B9500D047BE /* MiddleTabActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */; };
+		A2E7F75E220C9BF600D047BE /* MiddleTabActionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */; };
+		A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F760220C9CEA00D047BE /* ReportVC.swift */; };
+		A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KDWeddingGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7486E78C209B1594D202936F /* Pods-KDWeddingGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.debug.xcconfig"; sourceTree = "<group>"; };
+		779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.release.xcconfig"; sourceTree = "<group>"; };
 		A2E7F712220C772F00D047BE /* KDWeddingGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDWeddingGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E7F715220C772F00D047BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2E7F717220C772F00D047BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2E7F71A220C772F00D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2E7F717220C772F00D047BE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		A2E7F71A220C772F00D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainTabBar.storyboard; sourceTree = "<group>"; };
 		A2E7F71C220C773000D047BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2E7F71F220C773000D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2E7F721220C773000D047BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,13 +60,20 @@
 		A2E7F733220C784E00D047BE /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerX.swift; sourceTree = "<group>"; };
 		A2E7F736220C784E00D047BE /* KeyboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
-		A2E7F737220C784E00D047BE /* NetworkListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		A2E7F738220C784E00D047BE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		A2E7F739220C784E00D047BE /* EmojiString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiString.swift; sourceTree = "<group>"; };
 		A2E7F73A220C784E00D047BE /* VolumeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeService.swift; sourceTree = "<group>"; };
 		A2E7F73B220C784E00D047BE /* WeakObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakObj.swift; sourceTree = "<group>"; };
 		A2E7F73C220C784E00D047BE /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		A2E7F73D220C784E00D047BE /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		A2E7F751220C93E000D047BE /* WeddingGiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftVC.swift; sourceTree = "<group>"; };
+		A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeddingGiftVC.storyboard; sourceTree = "<group>"; };
+		A2E7F756220C97FD00D047BE /* QRScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
+		A2E7F758220C981500D047BE /* QRScannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerVC.storyboard; sourceTree = "<group>"; };
+		A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleTabActionVC.swift; sourceTree = "<group>"; };
+		A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MiddleTabActionVC.storyboard; sourceTree = "<group>"; };
+		A2E7F760220C9CEA00D047BE /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +81,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F54B46D39D7584934F196E2 /* Pods_KDWeddingGift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453AF3E9DEE2482CF6D4321A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7486E78C209B1594D202936F /* Pods-KDWeddingGift.debug.xcconfig */,
+				779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A2E7F709220C772F00D047BE = {
 			isa = PBXGroup;
 			children = (
 				A2E7F714220C772F00D047BE /* KDWeddingGift */,
 				A2E7F713220C772F00D047BE /* Products */,
+				453AF3E9DEE2482CF6D4321A /* Pods */,
+				DF078FFD84F435E03319D9FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +119,11 @@
 			isa = PBXGroup;
 			children = (
 				A2E7F729220C784E00D047BE /* KDSwiftUtilities */,
+				A2E7F74F220C81FC00D047BE /* MainTabBar */,
+				A2E7F750220C93BD00D047BE /* WeddingGiftVC */,
+				A2E7F75A220C9B5700D047BE /* MiddleTabActionVC */,
+				A2E7F75F220C9CD900D047BE /* ReportVC */,
 				A2E7F715220C772F00D047BE /* AppDelegate.swift */,
-				A2E7F717220C772F00D047BE /* ViewController.swift */,
-				A2E7F719220C772F00D047BE /* Main.storyboard */,
 				A2E7F71C220C773000D047BE /* Assets.xcassets */,
 				A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */,
 				A2E7F721220C773000D047BE /* Info.plist */,
@@ -137,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				A2E7F736220C784E00D047BE /* KeyboardService.swift */,
-				A2E7F737220C784E00D047BE /* NetworkListener.swift */,
 				A2E7F738220C784E00D047BE /* Log.swift */,
 				A2E7F739220C784E00D047BE /* EmojiString.swift */,
 				A2E7F73A220C784E00D047BE /* VolumeService.swift */,
@@ -148,6 +179,60 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A2E7F74F220C81FC00D047BE /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F717220C772F00D047BE /* MainTabBar.swift */,
+				A2E7F719220C772F00D047BE /* MainTabBar.storyboard */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		A2E7F750220C93BD00D047BE /* WeddingGiftVC */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F751220C93E000D047BE /* WeddingGiftVC.swift */,
+				A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */,
+			);
+			path = WeddingGiftVC;
+			sourceTree = "<group>";
+		};
+		A2E7F755220C950D00D047BE /* QRScannerVC */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F756220C97FD00D047BE /* QRScannerVC.swift */,
+				A2E7F758220C981500D047BE /* QRScannerVC.storyboard */,
+			);
+			path = QRScannerVC;
+			sourceTree = "<group>";
+		};
+		A2E7F75A220C9B5700D047BE /* MiddleTabActionVC */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */,
+				A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */,
+				A2E7F755220C950D00D047BE /* QRScannerVC */,
+			);
+			path = MiddleTabActionVC;
+			sourceTree = "<group>";
+		};
+		A2E7F75F220C9CD900D047BE /* ReportVC */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7F760220C9CEA00D047BE /* ReportVC.swift */,
+				A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */,
+			);
+			path = ReportVC;
+			sourceTree = "<group>";
+		};
+		DF078FFD84F435E03319D9FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2E7F724220C773000D047BE /* Build configuration list for PBXNativeTarget "KDWeddingGift" */;
 			buildPhases = (
+				3117E54796AD79EE02F80DC2 /* [CP] Check Pods Manifest.lock */,
 				A2E7F70E220C772F00D047BE /* Sources */,
 				A2E7F70F220C772F00D047BE /* Frameworks */,
 				A2E7F710220C772F00D047BE /* Resources */,
@@ -206,13 +292,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7F75E220C9BF600D047BE /* MiddleTabActionVC.storyboard in Resources */,
+				A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */,
 				A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */,
+				A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */,
+				A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */,
 				A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */,
-				A2E7F71B220C772F00D047BE /* Main.storyboard in Resources */,
+				A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3117E54796AD79EE02F80DC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KDWeddingGift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2E7F70E220C772F00D047BE /* Sources */ = {
@@ -221,35 +332,38 @@
 			files = (
 				A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */,
 				A2E7F744220C784E00D047BE /* StringX.swift in Sources */,
-				A2E7F718220C772F00D047BE /* ViewController.swift in Sources */,
+				A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */,
 				A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */,
 				A2E7F741220C784E00D047BE /* UIButtonX.swift in Sources */,
 				A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */,
+				A2E7F75C220C9B9500D047BE /* MiddleTabActionVC.swift in Sources */,
 				A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */,
 				A2E7F74D220C784E00D047BE /* Queue.swift in Sources */,
 				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
 				A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */,
 				A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */,
 				A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */,
+				A2E7F752220C93E000D047BE /* WeddingGiftVC.swift in Sources */,
 				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
+				A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */,
+				A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
 				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,
 				A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */,
 				A2E7F740220C784E00D047BE /* UIScrollViewX.swift in Sources */,
 				A2E7F743220C784E00D047BE /* UIViewControllerX.swift in Sources */,
-				A2E7F748220C784E00D047BE /* NetworkListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A2E7F719220C772F00D047BE /* Main.storyboard */ = {
+		A2E7F719220C772F00D047BE /* MainTabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A2E7F71A220C772F00D047BE /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainTabBar.storyboard;
 			sourceTree = "<group>";
 		};
 		A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */ = {
@@ -381,16 +495,14 @@
 		};
 		A2E7F725220C773000D047BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7486E78C209B1594D202936F /* Pods-KDWeddingGift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -400,16 +512,14 @@
 		};
 		A2E7F726220C773000D047BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

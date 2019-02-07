@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QRScannerVC.swift
 //  KDWeddingGift
 //
 //  Created by KoingDev on 2/7/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class QRScannerVC: UIViewController {
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
 	}
-
-
+	
+	@IBAction func closeVC(_ sender: Any) {
+		dismiss(animated: true)
+	}
 }
-
