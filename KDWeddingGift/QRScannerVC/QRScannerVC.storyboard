@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ca-kg-zg3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1ca-kg-zg3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,25 +13,49 @@
         <scene sceneID="56w-Ve-ktM">
             <objects>
                 <viewController id="1ca-kg-zg3" customClass="QRScannerVC" customModule="KDWeddingGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVJ-4u-oFR"/>
+                        <viewControllerLayoutGuide type="bottom" id="3nR-bM-7qv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aUe-F4-cGF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuD-sC-G1T">
-                                <rect key="frame" x="168" y="318.5" width="39" height="30"/>
+                                <rect key="frame" x="316" y="40" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeVC:" destination="1ca-kg-zg3" eventType="touchUpInside" id="Wdz-mZ-mDX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-CY-1VT">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="H0f-RB-tJu"/>
+                                    <constraint firstAttribute="width" secondItem="ht7-CY-1VT" secondAttribute="height" multiplier="4:4" id="bul-eU-NSc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BuD-sC-G1T" firstAttribute="centerX" secondItem="aUe-F4-cGF" secondAttribute="centerX" id="SMU-pw-Xfe"/>
-                            <constraint firstItem="BuD-sC-G1T" firstAttribute="centerY" secondItem="aUe-F4-cGF" secondAttribute="centerY" id="Y1p-2T-5je"/>
+                            <constraint firstAttribute="trailing" secondItem="BuD-sC-G1T" secondAttribute="trailing" constant="20" id="7jG-A0-QLC"/>
+                            <constraint firstItem="ht7-CY-1VT" firstAttribute="centerY" secondItem="aUe-F4-cGF" secondAttribute="centerY" id="ClR-az-tki"/>
+                            <constraint firstItem="BuD-sC-G1T" firstAttribute="top" secondItem="lVJ-4u-oFR" secondAttribute="bottom" constant="20" id="ImG-TY-IdU"/>
+                            <constraint firstItem="ht7-CY-1VT" firstAttribute="centerX" secondItem="aUe-F4-cGF" secondAttribute="centerX" id="i8I-Sr-40s"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="x86-r8-P7S"/>
                     </view>
+                    <connections>
+                        <outlet property="videoPreview" destination="ht7-CY-1VT" id="4II-74-vKE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AQ-nS-uZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

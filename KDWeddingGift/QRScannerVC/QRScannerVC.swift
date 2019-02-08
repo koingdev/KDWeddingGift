@@ -10,8 +10,27 @@ import UIKit
 
 final class QRScannerVC: UIViewController {
 	
+	@IBOutlet weak var videoPreview: UIView!
+	private var videoLayer: CALayer!
+	
+	private var qrCodeReader = AVQRCodeReader()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		videoLayer = qrCodeReader.videoPreview
+		videoPreview.layer.addSublayer(videoLayer)
+	}
+	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		videoLayer.frame = videoPreview.bounds
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		qrCodeReader.startReading { output in
+			Log.debug(output)
+		}
 	}
 	
 	@IBAction func closeVC(_ sender: Any) {

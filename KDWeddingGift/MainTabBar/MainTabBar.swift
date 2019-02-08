@@ -10,14 +10,17 @@ import UIKit
 
 class MainTabBar: UITabBarController {
 	
+	lazy var weddingGiftVC = WeddingGiftVC.instantiate()
+	lazy var reportVC = ReportVC.instantiate()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .selected)
 		
-		let weddingGiftNav = UINavigationController(rootViewController: WeddingGiftVC.instantiate())
-		let reportNav = UINavigationController(rootViewController: ReportVC.instantiate())
+		let weddingGiftNav = UINavigationController(rootViewController: weddingGiftVC)
+		let reportNav = UINavigationController(rootViewController: reportVC)
 		
 		viewControllers = [weddingGiftNav, reportNav]
 	}

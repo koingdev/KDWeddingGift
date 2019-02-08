@@ -10,6 +10,7 @@
 		3F54B46D39D7584934F196E2 /* Pods_KDWeddingGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */; };
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
+		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
 		A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F715220C772F00D047BE /* AppDelegate.swift */; };
 		A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* MainTabBar.swift */; };
 		A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* MainTabBar.storyboard */; };
@@ -45,6 +46,7 @@
 		779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.release.xcconfig"; sourceTree = "<group>"; };
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
+		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
 		A2E7F712220C772F00D047BE /* KDWeddingGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDWeddingGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E7F715220C772F00D047BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E7F717220C772F00D047BE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		A2E7F735220C784E00D047BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */,
 				A2E7F736220C784E00D047BE /* KeyboardService.swift */,
 				A2E7F738220C784E00D047BE /* Log.swift */,
 				A2E7F739220C784E00D047BE /* EmojiString.swift */,
@@ -360,6 +363,7 @@
 				A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */,
 				A2E7F740220C784E00D047BE /* UIScrollViewX.swift in Sources */,
 				A2E7F743220C784E00D047BE /* UIViewControllerX.swift in Sources */,
+				A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
