@@ -11,15 +11,16 @@ import UIKit
 class MainTabBar: UITabBarController {
 
 	lazy var weddingGiftVC = WeddingGiftVC.instantiate()
-	lazy var middleTabActionVC = MiddleTabActionVC.instantiate()
 	lazy var reportVC = ReportVC.instantiate()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		delegate = self
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .selected)
 		
-		viewControllers = [weddingGiftVC, middleTabActionVC, reportVC]
+		viewControllers = [weddingGiftVC, reportVC]
 	}
 
 }
@@ -34,14 +35,14 @@ extension MainTabBar: UITabBarControllerDelegate {
 		}
 	}
 	
-	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-		if viewController is MiddleTabActionVC {
-			let vc = QRScannerVC.instantiate()
-			vc.modalPresentationStyle = .overFullScreen
-			present(vc, animated: true)
-			return false
-		}
-		return true
-	}
+//	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//		if viewController is MiddleTabActionVC {
+//			let vc = QRScannerVC.instantiate()
+//			vc.modalPresentationStyle = .overFullScreen
+//			present(vc, animated: true)
+//			return false
+//		}
+//		return true
+//	}
 	
 }

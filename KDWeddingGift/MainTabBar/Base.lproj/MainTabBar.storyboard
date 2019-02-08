@@ -14,7 +14,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jp5-aF-ED7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="9No-SA-BiN" customClass="MainTabBar" customModule="KDWeddingGift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V9y-Cx-qy3">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V9y-Cx-qy3" customClass="MiddleCurveTabBar" customModule="KDWeddingGift" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

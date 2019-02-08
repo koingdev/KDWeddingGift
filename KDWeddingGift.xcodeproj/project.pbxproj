@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F54B46D39D7584934F196E2 /* Pods_KDWeddingGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */; };
+		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F715220C772F00D047BE /* AppDelegate.swift */; };
 		A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* MainTabBar.swift */; };
 		A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* MainTabBar.storyboard */; };
@@ -33,8 +34,6 @@
 		A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */; };
 		A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F756220C97FD00D047BE /* QRScannerVC.swift */; };
 		A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F758220C981500D047BE /* QRScannerVC.storyboard */; };
-		A2E7F75C220C9B9500D047BE /* MiddleTabActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */; };
-		A2E7F75E220C9BF600D047BE /* MiddleTabActionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */; };
 		A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F760220C9CEA00D047BE /* ReportVC.swift */; };
 		A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */; };
 /* End PBXBuildFile section */
@@ -43,6 +42,7 @@
 		3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KDWeddingGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7486E78C209B1594D202936F /* Pods-KDWeddingGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.debug.xcconfig"; sourceTree = "<group>"; };
 		779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.release.xcconfig"; sourceTree = "<group>"; };
+		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A2E7F712220C772F00D047BE /* KDWeddingGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDWeddingGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E7F715220C772F00D047BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E7F717220C772F00D047BE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -70,8 +70,6 @@
 		A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeddingGiftVC.storyboard; sourceTree = "<group>"; };
 		A2E7F756220C97FD00D047BE /* QRScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
 		A2E7F758220C981500D047BE /* QRScannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerVC.storyboard; sourceTree = "<group>"; };
-		A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleTabActionVC.swift; sourceTree = "<group>"; };
-		A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MiddleTabActionVC.storyboard; sourceTree = "<group>"; };
 		A2E7F760220C9CEA00D047BE /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +93,14 @@
 				779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A276E582220D1EB30023739E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A2E7F709220C772F00D047BE = {
@@ -121,7 +127,7 @@
 				A2E7F729220C784E00D047BE /* KDSwiftUtilities */,
 				A2E7F74F220C81FC00D047BE /* MainTabBar */,
 				A2E7F750220C93BD00D047BE /* WeddingGiftVC */,
-				A2E7F75A220C9B5700D047BE /* MiddleTabActionVC */,
+				A2E7F755220C950D00D047BE /* QRScannerVC */,
 				A2E7F75F220C9CD900D047BE /* ReportVC */,
 				A2E7F715220C772F00D047BE /* AppDelegate.swift */,
 				A2E7F71C220C773000D047BE /* Assets.xcassets */,
@@ -134,6 +140,7 @@
 		A2E7F729220C784E00D047BE /* KDSwiftUtilities */ = {
 			isa = PBXGroup;
 			children = (
+				A276E582220D1EB30023739E /* Components */,
 				A2E7F72A220C784E00D047BE /* DesignableX */,
 				A2E7F72C220C784E00D047BE /* Extensions */,
 				A2E7F735220C784E00D047BE /* Utilities */,
@@ -204,16 +211,6 @@
 				A2E7F758220C981500D047BE /* QRScannerVC.storyboard */,
 			);
 			path = QRScannerVC;
-			sourceTree = "<group>";
-		};
-		A2E7F75A220C9B5700D047BE /* MiddleTabActionVC */ = {
-			isa = PBXGroup;
-			children = (
-				A2E7F75B220C9B9500D047BE /* MiddleTabActionVC.swift */,
-				A2E7F75D220C9BF600D047BE /* MiddleTabActionVC.storyboard */,
-				A2E7F755220C950D00D047BE /* QRScannerVC */,
-			);
-			path = MiddleTabActionVC;
 			sourceTree = "<group>";
 		};
 		A2E7F75F220C9CD900D047BE /* ReportVC */ = {
@@ -292,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2E7F75E220C9BF600D047BE /* MiddleTabActionVC.storyboard in Resources */,
 				A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */,
 				A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */,
 				A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */,
@@ -330,13 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */,
 				A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */,
 				A2E7F744220C784E00D047BE /* StringX.swift in Sources */,
 				A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */,
 				A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */,
 				A2E7F741220C784E00D047BE /* UIButtonX.swift in Sources */,
 				A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */,
-				A2E7F75C220C9B9500D047BE /* MiddleTabActionVC.swift in Sources */,
 				A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */,
 				A2E7F74D220C784E00D047BE /* Queue.swift in Sources */,
 				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
@@ -502,7 +498,10 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -519,7 +518,10 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
