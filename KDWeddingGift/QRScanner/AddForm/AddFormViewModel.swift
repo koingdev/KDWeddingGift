@@ -43,13 +43,11 @@ final class AddFormViewModel {
 		if isFormValid() {
 			// Update operation
 			if idForUpdate > -1 {
-				WeddingGiftRealmModel.update(id: idForUpdate, name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-				completion?(true)
+				WeddingGiftRealmModel.update(id: idForUpdate, name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount, completion: completion)
 				
 			} else { // Add new
 				let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-				WeddingGiftRealmModel.write(object: object)
-				completion?(true)
+				WeddingGiftRealmModel.write(object: object, completion: completion)
 				
 			}
 		} else {

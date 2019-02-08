@@ -39,31 +39,54 @@ class WeddingGiftRealmModel: Object {
 
 extension WeddingGiftRealmModel {
 	
-	static func write(object: Object) {
+	static func write(object: Object, completion: ((Bool) -> Void)? = nil) {
 		do {
 			let realm = try Realm()
 			try realm.write {
 				realm.add(object)
+				completion?(true)
 			}
 		} catch {
 			Log.error("Cannot insert data to Realm")
+			completion?(false)
 		}
 	}
 	
-	static func update(id: Int, name: String, dollarAmount: Double = 0, rielAmount: Double = 0) {
+	static func delete(id: Int, completion: (Bool) -> Void) {
 		do {
 			let realm = try Realm()
 			guard let object = realm.object(ofType: WeddingGiftRealmModel.self, forPrimaryKey: id) else {
 				Log.debug("Cannot find AddFormRealmModel with key \(id)")
+				completion(false)
+				return
+			}
+			try realm.write {
+				realm.delete(object)
+				completion(true)
+			}
+		} catch {
+			Log.error("Cannot delete data from Realm")
+			completion(false)
+		}
+	}
+	
+	static func update(id: Int, name: String, dollarAmount: Double = 0, rielAmount: Double = 0, completion: ((Bool) -> Void)? = nil) {
+		do {
+			let realm = try Realm()
+			guard let object = realm.object(ofType: WeddingGiftRealmModel.self, forPrimaryKey: id) else {
+				Log.debug("Cannot find AddFormRealmModel with key \(id)")
+				completion?(false)
 				return
 			}
 			try realm.write {
 				object.name = name
 				object.dollarAmount = dollarAmount
 				object.rielAmount = rielAmount
+				completion?(true)
 			}
 		} catch {
 			Log.error("Cannot update data to Realm")
+			completion?(false)
 		}
 	}
 	

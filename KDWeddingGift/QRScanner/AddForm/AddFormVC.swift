@@ -36,6 +36,8 @@ final class AddFormVC: UIViewController {
 				if success {
 					self.didFinishAddData?()
 					UIViewController.topMostViewController.dismiss(animated: true)
+				} else {
+					Log.warning("Submit data failed")
 				}
 				self.view.endEditing(true)
 			}

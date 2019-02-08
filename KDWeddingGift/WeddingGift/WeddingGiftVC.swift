@@ -19,6 +19,7 @@ final class WeddingGiftVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		tableView.delegate = self
 		tableView.dataSource = self
 		
 		// first time fetch
@@ -43,6 +44,29 @@ final class WeddingGiftVC: UIViewController {
 // MARK: Delegate
 
 extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			guard let data = viewModel.datas?[indexPath.row] else {
+				Log.warning("No data to delete at index \(indexPath.row)")
+				return
+			}
+			let id = data.id
+			UIAlertController.alertOkayCancel(title: "តើអ្នកពិតជាចង់លុបទិន្នន័យឈ្មោះ \(data.name)?") { [weak self] _ in
+				self?.viewModel.delete(id: id) { success in
+					if success {
+						tableView.reloadData()
+					} else {
+						Log.warning("Delete data at index \(indexPath.row) failed")
+					}
+				}
+			}
+		}
+	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.count

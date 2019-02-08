@@ -25,6 +25,10 @@ final class WeddingGiftViewModel {
 		return datas?[index].rielAmount ?? 0
 	}
 	
+	func delete(id: Int, completion: (Bool) -> Void) {
+		WeddingGiftRealmModel.delete(id: id, completion: completion)
+	}
+	
 	func getAllDatas(completion: @escaping () -> Void) {
 		WeddingGiftRealmModel.getAll { datas in
 			self.datas = datas
