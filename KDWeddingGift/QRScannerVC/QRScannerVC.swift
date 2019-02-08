@@ -10,6 +10,7 @@ import UIKit
 
 final class QRScannerVC: UIViewController {
 	
+	@IBOutlet weak var btnCannotScan: UIButton!
 	@IBOutlet weak var videoPreview: UIView!
 	private var videoLayer: CALayer!
 	
@@ -31,6 +32,11 @@ final class QRScannerVC: UIViewController {
 		qrCodeReader.startReading { output in
 			Log.debug(output)
 		}
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		qrCodeReader.stopReading()
 	}
 	
 	@IBAction func closeVC(_ sender: Any) {

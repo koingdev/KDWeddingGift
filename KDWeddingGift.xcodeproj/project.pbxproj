@@ -11,6 +11,7 @@
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
+		A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A81220D59890042F77F /* DesignableButton.swift */; };
 		A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F715220C772F00D047BE /* AppDelegate.swift */; };
 		A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* MainTabBar.swift */; };
 		A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* MainTabBar.storyboard */; };
@@ -47,6 +48,7 @@
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
+		A2BF1A81220D59890042F77F /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		A2E7F712220C772F00D047BE /* KDWeddingGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDWeddingGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E7F715220C772F00D047BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E7F717220C772F00D047BE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -154,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A276E582220D1EB30023739E /* Components */,
-				A2E7F72A220C784E00D047BE /* DesignableX */,
+				A2E7F72A220C784E00D047BE /* DesignableKit */,
 				A2E7F72C220C784E00D047BE /* Extensions */,
 				A2E7F735220C784E00D047BE /* Utilities */,
 			);
@@ -162,12 +164,13 @@
 			path = ../../KDSwiftUtilities;
 			sourceTree = "<group>";
 		};
-		A2E7F72A220C784E00D047BE /* DesignableX */ = {
+		A2E7F72A220C784E00D047BE /* DesignableKit */ = {
 			isa = PBXGroup;
 			children = (
 				A2E7F72B220C784E00D047BE /* UITextFieldX.swift */,
+				A2BF1A81220D59890042F77F /* DesignableButton.swift */,
 			);
-			path = DesignableX;
+			path = DesignableKit;
 			sourceTree = "<group>";
 		};
 		A2E7F72C220C784E00D047BE /* Extensions */ = {
@@ -353,6 +356,7 @@
 				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
 				A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */,
 				A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */,
+				A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */,
 				A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */,
 				A2E7F752220C93E000D047BE /* WeddingGiftVC.swift in Sources */,
 				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
