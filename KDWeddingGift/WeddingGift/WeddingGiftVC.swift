@@ -18,8 +18,7 @@ final class WeddingGiftVC: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		tableView.delegate = self
+
 		tableView.dataSource = self
 		
 		// first time fetch
@@ -45,21 +44,6 @@ final class WeddingGiftVC: UIViewController {
 
 extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let index = indexPath.row
-		let vc = AddFormVC.instantiate()
-		_ = vc.view	// force view to render
-		vc.viewModel.name.value = viewModel.datas?[index].name
-		let dollarAmount = viewModel.getDollarAmount(index: index)
-		if dollarAmount > 0 {
-			vc.viewModel.dollarAmount.value = "\(dollarAmount)"
-		}
-		let rielAmount = viewModel.getRietAmount(index: index)
-		if rielAmount > 0 {
-			vc.viewModel.rielAmount.value = "\(rielAmount)"
-		}
-	}
-	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.count
 	}
@@ -67,10 +51,27 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(of: WeddingGiftTableViewCell.self, for: indexPath) { [weak self] cell in
 			guard let self = self else { return }
-			if let data = self.viewModel.datas?[indexPath.row] {
-				cell.lbName.text = data.name
-				cell.setRielAmount(data.rielAmount)
-				cell.setDollarAmount(data.dollarAmount)
+			let index = indexPath.row
+			cell.configure(data: self.viewModel.datas?[index]) {
+				let vc = AddFormVC.instantiate()
+				_ = vc.view	// force view to render
+				
+				// For update realm and list from AddForm
+				vc.viewModel.idForUpdate = self.viewModel.datas?[index].id ?? 0
+				vc.viewModel.name.value = self.viewModel.datas?[index].name
+				let dollarAmount = self.viewModel.getDollarAmount(index: index)
+				if dollarAmount > 0 {
+					vc.viewModel.dollarAmount.value = "\(dollarAmount)"
+				}
+				let rielAmount = self.viewModel.getRietAmount(index: index)
+				if rielAmount > 0 {
+					vc.viewModel.rielAmount.value = "\(rielAmount)"
+				}
+				vc.didFinishAddData = {
+					Log.debug("FINISH UPDATE")
+					self.tableView.reloadData()
+				}
+				self.present(vc, animated: true)
 			}
 		}
 		return cell

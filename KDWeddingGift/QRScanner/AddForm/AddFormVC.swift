@@ -32,7 +32,7 @@ final class AddFormVC: UIViewController {
 		// Event
 		_ = btnAdd.reactive.controlEvents(.touchUpInside).throttle(seconds: 1).observeNext { [weak self] in
 			guard let self = self else { return }
-			self.viewModel.addWeddingGift { success in
+			self.viewModel.submitWeddingGift { success in
 				if success {
 					self.didFinishAddData?()
 					UIViewController.topMostViewController.dismiss(animated: true)

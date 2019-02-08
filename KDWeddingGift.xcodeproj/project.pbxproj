@@ -15,6 +15,7 @@
 		A2039BBB220D80CA00C67AAD /* WeddingGiftRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BBA220D80CA00C67AAD /* WeddingGiftRealmModel.swift */; };
 		A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */; };
 		A2039BC3220D8FF400C67AAD /* WeddingGiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */; };
+		A2039BC5220DC81700C67AAD /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC4220DC81700C67AAD /* HighlightView.swift */; };
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
@@ -59,6 +60,7 @@
 		A2039BBA220D80CA00C67AAD /* WeddingGiftRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftRealmModel.swift; sourceTree = "<group>"; };
 		A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftViewModel.swift; sourceTree = "<group>"; };
 		A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftTableViewCell.swift; sourceTree = "<group>"; };
+		A2039BC4220DC81700C67AAD /* HighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightView.swift; sourceTree = "<group>"; };
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */,
+				A2039BC4220DC81700C67AAD /* HighlightView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */,
+				A2039BC5220DC81700C67AAD /* HighlightView.swift in Sources */,
 				A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */,
 				A2E7F744220C784E00D047BE /* StringX.swift in Sources */,
 				A2039BB7220D6CFA00C67AAD /* CloseButton.swift in Sources */,

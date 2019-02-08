@@ -10,6 +10,10 @@ import Bond
 
 final class AddFormViewModel {
 	
+	// if id > -1 => update
+	// if id == -1 => insert
+	var idForUpdate = -1
+	
 	// Binding
 	let name = Observable<String?>("")
 	var dollarAmount = Observable<String?>("")
@@ -35,11 +39,19 @@ final class AddFormViewModel {
 		return isNameNotEmpty && (isDollarAmountNotEmpty || isRielAmountNotEmpty)
 	}
 	
-	func addWeddingGift(completion: ((Bool) -> Void)? = nil) {
+	func submitWeddingGift(completion: ((Bool) -> Void)? = nil) {
 		if isFormValid() {
-			let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-			WeddingGiftRealmModel.write(object: object)
-			completion?(true)
+			// Update operation
+			if idForUpdate > -1 {
+				WeddingGiftRealmModel.update(id: idForUpdate, name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
+				completion?(true)
+				
+			} else { // Add new
+				let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
+				WeddingGiftRealmModel.write(object: object)
+				completion?(true)
+				
+			}
 		} else {
 			completion?(false)
 		}
