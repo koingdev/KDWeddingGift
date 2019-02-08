@@ -11,6 +11,7 @@
 		A2039BB3220D67D400C67AAD /* WeddingGiftFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */; };
 		A2039BB5220D67DD00C67AAD /* WeddingGiftFormVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */; };
 		A2039BB7220D6CFA00C67AAD /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB6220D6CFA00C67AAD /* CloseButton.swift */; };
+		A2039BB9220D761500C67AAD /* WeddingGiftFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */; };
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
@@ -51,6 +52,7 @@
 		A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftFormVC.swift; sourceTree = "<group>"; };
 		A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeddingGiftFormVC.storyboard; sourceTree = "<group>"; };
 		A2039BB6220D6CFA00C67AAD /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftFormViewModel.swift; sourceTree = "<group>"; };
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		A2039BB1220D679900C67AAD /* WeddingGiftForm */ = {
 			isa = PBXGroup;
 			children = (
+				A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */,
 				A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */,
 				A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */,
 			);
@@ -275,6 +278,7 @@
 				A2E7F70E220C772F00D047BE /* Sources */,
 				A2E7F70F220C772F00D047BE /* Frameworks */,
 				A2E7F710220C772F00D047BE /* Resources */,
+				4E374E083F1C2D558F2009E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,6 +358,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4E374E083F1C2D558F2009E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -382,6 +408,7 @@
 				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
 				A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */,
 				A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */,
+				A2039BB9220D761500C67AAD /* WeddingGiftFormViewModel.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
 				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,
 				A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */,
@@ -538,10 +565,7 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -558,10 +582,7 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

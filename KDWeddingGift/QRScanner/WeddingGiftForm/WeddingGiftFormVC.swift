@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 final class WeddingGiftFormVC: UIViewController {
 	
@@ -14,18 +15,26 @@ final class WeddingGiftFormVC: UIViewController {
 	@IBOutlet weak var tfAmountDollar: UITextField!
 	@IBOutlet weak var tfAmountRiel: UITextField!
 	
-	var didFinishScanning: ((String) -> Void)?
+	@IBOutlet weak var btnAdd: UIButton!
+	let viewModel = WeddingGiftFormViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		didFinishScanning = { [weak self] name in
-			self?.tfName.text = name
-		}
-	}
-	
-	@IBAction func addWeddingGift(_ sender: Any) {
+		// Binding
+		viewModel.name.bidirectionalBind(to: tfName.reactive.text)
+		viewModel.dollarAmount.bidirectionalBind(to: tfAmountDollar.reactive.text)
 		
+		// Event
+		_ = btnAdd.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
+			guard let self = self else { return }
+			guard self.viewModel.isFormValid() else {
+				self.view.endEditing(true)
+				return
+			}
+			// Valid ?
+			
+		}
 	}
 	
 }

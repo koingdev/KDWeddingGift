@@ -4,6 +4,7 @@ inhibit_all_warnings!
 target 'KDWeddingGift' do
   
   use_frameworks!
-
+  
+  	pod 'Bond'
 
 end

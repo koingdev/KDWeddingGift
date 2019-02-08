@@ -10,7 +10,6 @@ import UIKit
 
 final class QRScannerVC: UIViewController {
 	
-	@IBOutlet weak var btnCannotScan: UIButton!
 	@IBOutlet weak var videoPreview: UIView!
 	private var videoLayer: CALayer!
 	
@@ -32,7 +31,7 @@ final class QRScannerVC: UIViewController {
 		qrCodeReader.startReading { [weak self] name in
 			let formVC = WeddingGiftFormVC.instantiate()
 			self?.present(formVC, animated: true) {
-				formVC.didFinishScanning?(name)
+				formVC.viewModel.name.value = name
 			}
 		}
 	}

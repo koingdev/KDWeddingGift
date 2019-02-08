@@ -100,7 +100,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnCannotScan" destination="gQj-v7-BMN" id="asD-rY-udO"/>
                         <outlet property="videoPreview" destination="ht7-CY-1VT" id="4II-74-vKE"/>
                     </connections>
                 </viewController>
