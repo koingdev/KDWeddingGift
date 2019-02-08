@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bd7-Ry-c7b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AUX-Af-hEr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-BW-04K" customClass="QRScannerButton" customModule="KDWeddingGift" customModuleProvider="target">
-                                <rect key="frame" x="152.5" y="583" width="70" height="70"/>
+                                <rect key="frame" x="157.5" y="588" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Mdr-BW-04K" secondAttribute="height" multiplier="1:1" id="Bjb-0Q-Coj"/>
-                                    <constraint firstAttribute="width" constant="70" id="K54-3f-arp"/>
+                                    <constraint firstAttribute="width" constant="60" id="K54-3f-arp"/>
                                 </constraints>
                                 <state key="normal" image="qr"/>
                             </button>
@@ -38,31 +38,30 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="របាយការណ៍" image="report_unselected" selectedImage="report_selected" id="ui3-9n-tEA"/>
-                    <navigationItem key="navigationItem" id="kSM-yi-Udi"/>
+                    <navigationItem key="navigationItem" title="របាយការណ៍" id="kSM-yi-Udi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qof-6i-202" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="185.75712143928038"/>
+            <point key="canvasLocation" x="1980" y="185.75712143928038"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Dao-vZ-gJd">
+        <scene sceneID="Jzd-O1-HU7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bd7-Ry-c7b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="RGd-M0-fTx"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUX-Af-hEr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CaN-02-8kC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bT9-9m-wEv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aZq-6Q-SxJ" kind="relationship" relationship="rootViewController" id="hn2-PD-H5K"/>
+                        <segue destination="aZq-6Q-SxJ" kind="relationship" relationship="rootViewController" id="pZX-cW-tU6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lag-Tv-Zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbi-78-HCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="185.75712143928038"/>
+            <point key="canvasLocation" x="1040.8" y="185.75712143928038"/>
         </scene>
     </scenes>
     <resources>

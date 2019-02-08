@@ -21,26 +21,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjU-Bf-roT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzU-nx-UcH" customClass="QRScannerButton" customModule="KDWeddingGift" customModuleProvider="target">
-                                <rect key="frame" x="152.5" y="583" width="70" height="70"/>
+                                <rect key="frame" x="157.5" y="588" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MzU-nx-UcH" secondAttribute="height" multiplier="1:1" id="O3W-BD-D5G"/>
-                                    <constraint firstAttribute="width" constant="70" id="qa8-Os-Xb7"/>
+                                    <constraint firstAttribute="width" constant="60" id="qa8-Os-Xb7"/>
                                 </constraints>
                                 <state key="normal" image="qr"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YjU-Bf-roT" firstAttribute="top" secondItem="uJK-VO-2fM" secondAttribute="bottom" id="APR-gH-bmF"/>
+                            <constraint firstItem="YjU-Bf-roT" firstAttribute="leading" secondItem="YeF-Ey-NTx" secondAttribute="leading" id="SGs-vL-CVy"/>
                             <constraint firstItem="MzU-nx-UcH" firstAttribute="centerY" secondItem="z7V-el-8VS" secondAttribute="top" id="X4T-eE-zUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="YjU-Bf-roT" secondAttribute="trailing" id="aFY-Mq-hTF"/>
+                            <constraint firstItem="z7V-el-8VS" firstAttribute="top" secondItem="YjU-Bf-roT" secondAttribute="bottom" id="el6-94-l3q"/>
                             <constraint firstItem="MzU-nx-UcH" firstAttribute="centerX" secondItem="YeF-Ey-NTx" secondAttribute="centerX" id="tfy-jU-AHp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ចំណងដៃ" image="wedding_gift_unselected" selectedImage="wedding_gift_selected" id="Fow-oY-ln6">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="3"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="WPU-C2-isc"/>
+                    <navigationItem key="navigationItem" title="ចំណងដៃ" id="WPU-C2-isc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmw-wN-WA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -50,8 +58,8 @@
         <!--Navigation Controller-->
         <scene sceneID="MGH-qm-KUV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7I-VE-EWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bBh-7S-534" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="UEl-0h-3H3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ulN-vX-ptl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -62,7 +70,6 @@
                         <segue destination="nxR-5a-q3d" kind="relationship" relationship="rootViewController" id="gTy-ze-DU2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7I-VE-EWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="176.76161919040482"/>
         </scene>

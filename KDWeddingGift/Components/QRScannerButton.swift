@@ -8,16 +8,10 @@
 
 import UIKit
 
-@IBDesignable
 final class QRScannerButton: UIButton {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		setUp()
-	}
-	
-	override func prepareForInterfaceBuilder() {
-		super.prepareForInterfaceBuilder()
 		setUp()
 	}
 	

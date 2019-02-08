@@ -12,6 +12,7 @@ final class WeddingGiftVC: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		tabBarController?.navigationItem.title = "Profile Settings"
 	}
 	
 }

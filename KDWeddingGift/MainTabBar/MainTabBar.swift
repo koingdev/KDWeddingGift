@@ -9,9 +9,6 @@
 import UIKit
 
 class MainTabBar: UITabBarController {
-
-	lazy var weddingGiftVC = WeddingGiftVC.instantiate()
-	lazy var reportVC = ReportVC.instantiate()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,19 +16,16 @@ class MainTabBar: UITabBarController {
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .selected)
 		
-		viewControllers = [weddingGiftVC, reportVC]
+		let weddingGiftNav = UINavigationController(rootViewController: WeddingGiftVC.instantiate())
+		let reportNav = UINavigationController(rootViewController: ReportVC.instantiate())
+		
+		viewControllers = [weddingGiftNav, reportNav]
 	}
-
-}
-
-// MARK: Delegate
-
-extension MainTabBar: UITabBarControllerDelegate {
 	
 	override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 		if let view = item.value(forKey: "view") as? UIView {
 			view.bounce()
 		}
 	}
-	
+
 }
