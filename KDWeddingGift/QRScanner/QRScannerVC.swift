@@ -29,8 +29,11 @@ final class QRScannerVC: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		qrCodeReader.startReading { output in
-			Log.debug(output)
+		qrCodeReader.startReading { [weak self] name in
+			let formVC = WeddingGiftFormVC.instantiate()
+			self?.present(formVC, animated: true) {
+				formVC.didFinishScanning?(name)
+			}
 		}
 	}
 	
@@ -39,7 +42,4 @@ final class QRScannerVC: UIViewController {
 		qrCodeReader.stopReading()
 	}
 	
-	@IBAction func closeVC(_ sender: Any) {
-		dismiss(animated: true)
-	}
 }
