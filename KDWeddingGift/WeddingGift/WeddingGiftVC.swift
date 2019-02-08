@@ -52,6 +52,8 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 			guard let self = self else { return }
 			if let data = self.viewModel.datas?[indexPath.row] {
 				cell.lbName.text = data.name
+				cell.setRielAmount(data.rielAmount)
+				cell.setDollarAmount(data.dollarAmount)
 			}
 		}
 		return cell
