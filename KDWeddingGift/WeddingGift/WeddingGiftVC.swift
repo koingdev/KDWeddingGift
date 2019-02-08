@@ -13,18 +13,39 @@ final class WeddingGiftVC: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var btnScanQR: QRScannerButton!
+	lazy var searchController = UISearchController(searchResultsController: nil)
 	
 	let viewModel = WeddingGiftViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		
+		// Search bar
+		if #available(iOS 11.0, *) {
+			searchController.searchResultsUpdater = self
+			searchController.searchBar.placeholder = "ស្វែងរក"
+			searchController.obscuresBackgroundDuringPresentation = false
+			navigationItem.searchController = searchController
+			navigationItem.hidesSearchBarWhenScrolling = true
+			definesPresentationContext = true
+		} else {
+			// Fallback on earlier versions
+		}
+		
 		tableView.delegate = self
 		tableView.dataSource = self
 		
 		// first time fetch
 		viewModel.getAllDatas { [weak self] in
 			self?.tableView.reloadData()
+		}
+		
+		// Observe
+		_ = viewModel.searchName.skip(first: 2).distinct().observeNext { [weak self] searchName in
+			self?.viewModel.search(name: searchName) {
+				Log.debug("SEARCHED")
+				self?.tableView.reloadData()
+			}
 		}
 		
 		// Event
@@ -69,6 +90,9 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if isFiltering() {
+			return viewModel.filteredCount
+		}
 		return viewModel.count
 	}
 	
@@ -76,18 +100,28 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(of: WeddingGiftTableViewCell.self, for: indexPath) { [weak self] cell in
 			guard let self = self else { return }
 			let index = indexPath.row
-			cell.configure(data: self.viewModel.datas?[index]) {
+			var data: WeddingGiftRealmModel?
+			// Filter ?
+			if self.isFiltering() {
+				data = viewModel.filteredDatas?[index]
+			} else {
+				data = viewModel.datas?[index]
+			}
+			guard let safeData = data else { return }
+			
+			cell.configure(data: safeData) {
+				// Tap on cell action
 				let vc = AddFormVC.instantiate()
 				_ = vc.view	// force view to render
 				
 				// For update realm and list from AddForm
-				vc.viewModel.idForUpdate = self.viewModel.datas?[index].id ?? 0
-				vc.viewModel.name.value = self.viewModel.datas?[index].name
-				let dollarAmount = self.viewModel.getDollarAmount(index: index)
+				vc.viewModel.idForUpdate = safeData.id
+				vc.viewModel.name.value = safeData.name
+				let dollarAmount = safeData.dollarAmount
 				if dollarAmount > 0 {
 					vc.viewModel.dollarAmount.value = "\(dollarAmount)"
 				}
-				let rielAmount = self.viewModel.getRietAmount(index: index)
+				let rielAmount = safeData.rielAmount
 				if rielAmount > 0 {
 					vc.viewModel.rielAmount.value = "\(rielAmount)"
 				}
@@ -99,6 +133,25 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 			}
 		}
 		return cell
+	}
+	
+}
+
+// MARK: Search Controller
+
+extension WeddingGiftVC: UISearchResultsUpdating {
+	
+	func isFiltering() -> Bool {
+		let isSearchBarNotEmpty = !(searchController.searchBar.text?.isEmpty ?? true)
+		return searchController.isActive && isSearchBarNotEmpty
+	}
+	
+	func updateSearchResults(for searchController: UISearchController) {
+		viewModel.searchName.value = searchController.searchBar.text ?? ""
+//		viewModel.search(name: searchController.searchBar.text) { [weak self] in
+//			Log.debug("SEARCHED")
+//			self?.tableView.reloadData()
+//		}
 	}
 	
 }

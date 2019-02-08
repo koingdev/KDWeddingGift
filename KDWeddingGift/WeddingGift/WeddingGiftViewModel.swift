@@ -12,17 +12,22 @@ import RealmSwift
 final class WeddingGiftViewModel {
 	
 	var datas: Results<WeddingGiftRealmModel>?
+	var filteredDatas: Results<WeddingGiftRealmModel>?
+	let searchName = Observable<String>("")
 	
 	var count: Int {
 		return datas?.count ?? 0
 	}
 	
-	func getDollarAmount(index: Int) -> Double {
-		return datas?[index].dollarAmount ?? 0
+	var filteredCount: Int {
+		return filteredDatas?.count ?? 0
 	}
 	
-	func getRietAmount(index: Int) -> Double {
-		return datas?[index].rielAmount ?? 0
+	func search(name: String, completion: () -> Void) {
+		WeddingGiftRealmModel.search(name: name) { filteredResult in
+			self.filteredDatas = filteredResult
+			completion()
+		}
 	}
 	
 	func delete(id: Int, completion: (Bool) -> Void) {

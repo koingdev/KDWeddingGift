@@ -19,22 +19,20 @@ final class WeddingGiftTableViewCell: UITableViewCell {
 		super.awakeFromNib()
 	}
 	
-	func configure(data: WeddingGiftRealmModel?, action: (() -> Void)?) {
-		if let data = data {
-			lbName.text = data.name
-			setRielAmount(data.rielAmount)
-			setDollarAmount(data.dollarAmount)
-			
-			// Action
-			mainView.setAction(delayHighlight: 1, action: action)
-		}
+	func configure(data: WeddingGiftRealmModel, action: (() -> Void)?) {
+		lbName.text = data.name
+		setRielAmount(data.rielAmount)
+		setDollarAmount(data.dollarAmount)
+		
+		// Action
+		mainView.setAction(delayHighlight: 1, action: action)
 	}
 	
-	func setRielAmount(_ amount: Double) {
+	private func setRielAmount(_ amount: Double) {
 		lbRielAmount.text = "\(amount) រៀល"
 	}
 	
-	func setDollarAmount(_ amount: Double) {
+	private func setDollarAmount(_ amount: Double) {
 		lbDollarAmount.text = "\(amount) ដុល្លា"
 	}
 	
