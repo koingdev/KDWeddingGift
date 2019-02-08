@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import Bond
 
 final class ReportVC: UIViewController {
+	
+	@IBOutlet weak var btnScanQR: QRScannerButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		// Event
+		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
+			guard let self = self else { return }
+			let vc = QRScannerVC.instantiate()
+			self.present(vc, animated: true)
+		}
 	}
 	
 }

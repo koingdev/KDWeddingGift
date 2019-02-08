@@ -40,6 +40,9 @@
                     <tabBarItem key="tabBarItem" tag="1" title="របាយការណ៍" image="report_unselected" selectedImage="report_selected" id="ui3-9n-tEA"/>
                     <navigationItem key="navigationItem" title="របាយការណ៍" id="kSM-yi-Udi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnScanQR" destination="Mdr-BW-04K" id="6Ve-YT-u4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qof-6i-202" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

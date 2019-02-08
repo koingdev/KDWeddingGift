@@ -15,6 +15,9 @@ final class QRScannerVC: UIViewController {
 	
 	private var qrCodeReader = AVQRCodeReader()
 	
+	// Observe when data added to reload WeddingGift tableView
+	var didFinishAddData: (() -> Void)?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		videoLayer = qrCodeReader.videoPreview
@@ -29,9 +32,10 @@ final class QRScannerVC: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		qrCodeReader.startReading { [weak self] name in
-			let formVC = WeddingGiftFormVC.instantiate()
-			self?.present(formVC, animated: true) {
-				formVC.viewModel.name.value = name
+			let vc = AddFormVC.instantiate()
+			vc.didFinishAddData = self?.didFinishAddData
+			self?.present(vc, animated: true) {
+				vc.viewModel.name.value = name
 			}
 		}
 	}

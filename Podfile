@@ -5,6 +5,7 @@ target 'KDWeddingGift' do
   
   use_frameworks!
   
+  	pod 'RealmSwift'
   	pod 'Bond'
 
 end

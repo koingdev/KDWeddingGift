@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F54B46D39D7584934F196E2 /* Pods_KDWeddingGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */; };
-		A2039BB3220D67D400C67AAD /* WeddingGiftFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */; };
-		A2039BB5220D67DD00C67AAD /* WeddingGiftFormVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */; };
+		A2039BB3220D67D400C67AAD /* AddFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB2220D67D400C67AAD /* AddFormVC.swift */; };
+		A2039BB5220D67DD00C67AAD /* AddFormVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2039BB4220D67DD00C67AAD /* AddFormVC.storyboard */; };
 		A2039BB7220D6CFA00C67AAD /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB6220D6CFA00C67AAD /* CloseButton.swift */; };
-		A2039BB9220D761500C67AAD /* WeddingGiftFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */; };
+		A2039BB9220D761500C67AAD /* AddFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BB8220D761500C67AAD /* AddFormViewModel.swift */; };
+		A2039BBB220D80CA00C67AAD /* WeddingGiftRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BBA220D80CA00C67AAD /* WeddingGiftRealmModel.swift */; };
+		A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */; };
+		A2039BC3220D8FF400C67AAD /* WeddingGiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */; };
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
@@ -49,10 +52,13 @@
 		3CAFB2F38D38228CE6BB8EF8 /* Pods_KDWeddingGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KDWeddingGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7486E78C209B1594D202936F /* Pods-KDWeddingGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.debug.xcconfig"; sourceTree = "<group>"; };
 		779A05C79DC66EFEDADE22D3 /* Pods-KDWeddingGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KDWeddingGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-KDWeddingGift/Pods-KDWeddingGift.release.xcconfig"; sourceTree = "<group>"; };
-		A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftFormVC.swift; sourceTree = "<group>"; };
-		A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeddingGiftFormVC.storyboard; sourceTree = "<group>"; };
+		A2039BB2220D67D400C67AAD /* AddFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormVC.swift; sourceTree = "<group>"; };
+		A2039BB4220D67DD00C67AAD /* AddFormVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFormVC.storyboard; sourceTree = "<group>"; };
 		A2039BB6220D6CFA00C67AAD /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
-		A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftFormViewModel.swift; sourceTree = "<group>"; };
+		A2039BB8220D761500C67AAD /* AddFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormViewModel.swift; sourceTree = "<group>"; };
+		A2039BBA220D80CA00C67AAD /* WeddingGiftRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftRealmModel.swift; sourceTree = "<group>"; };
+		A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftViewModel.swift; sourceTree = "<group>"; };
+		A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftTableViewCell.swift; sourceTree = "<group>"; };
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
@@ -109,14 +115,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A2039BB1220D679900C67AAD /* WeddingGiftForm */ = {
+		A2039BB1220D679900C67AAD /* AddForm */ = {
 			isa = PBXGroup;
 			children = (
-				A2039BB8220D761500C67AAD /* WeddingGiftFormViewModel.swift */,
-				A2039BB2220D67D400C67AAD /* WeddingGiftFormVC.swift */,
-				A2039BB4220D67DD00C67AAD /* WeddingGiftFormVC.storyboard */,
+				A2039BB8220D761500C67AAD /* AddFormViewModel.swift */,
+				A2039BB2220D67D400C67AAD /* AddFormVC.swift */,
+				A2039BB4220D67DD00C67AAD /* AddFormVC.storyboard */,
 			);
-			path = WeddingGiftForm;
+			path = AddForm;
 			sourceTree = "<group>";
 		};
 		A276E582220D1EB30023739E /* Components */ = {
@@ -160,7 +166,7 @@
 				A2E7F729220C784E00D047BE /* KDSwiftUtilities */,
 				A276E587220D31ED0023739E /* Components */,
 				A2E7F74F220C81FC00D047BE /* MainTabBar */,
-				A2E7F750220C93BD00D047BE /* WeddingGiftt */,
+				A2E7F750220C93BD00D047BE /* WeddingGift */,
 				A2E7F755220C950D00D047BE /* QRScanner */,
 				A2E7F75F220C9CD900D047BE /* Report */,
 				A2E7F715220C772F00D047BE /* AppDelegate.swift */,
@@ -231,13 +237,16 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
-		A2E7F750220C93BD00D047BE /* WeddingGiftt */ = {
+		A2E7F750220C93BD00D047BE /* WeddingGift */ = {
 			isa = PBXGroup;
 			children = (
+				A2039BBA220D80CA00C67AAD /* WeddingGiftRealmModel.swift */,
+				A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */,
+				A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */,
 				A2E7F751220C93E000D047BE /* WeddingGiftVC.swift */,
 				A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */,
 			);
-			path = WeddingGiftt;
+			path = WeddingGift;
 			sourceTree = "<group>";
 		};
 		A2E7F755220C950D00D047BE /* QRScanner */ = {
@@ -245,7 +254,7 @@
 			children = (
 				A2E7F756220C97FD00D047BE /* QRScannerVC.swift */,
 				A2E7F758220C981500D047BE /* QRScannerVC.storyboard */,
-				A2039BB1220D679900C67AAD /* WeddingGiftForm */,
+				A2039BB1220D679900C67AAD /* AddForm */,
 			);
 			path = QRScanner;
 			sourceTree = "<group>";
@@ -332,7 +341,7 @@
 				A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */,
 				A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */,
 				A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */,
-				A2039BB5220D67DD00C67AAD /* WeddingGiftFormVC.storyboard in Resources */,
+				A2039BB5220D67DD00C67AAD /* AddFormVC.storyboard in Resources */,
 				A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,12 +377,16 @@
 				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,7 +412,7 @@
 				A2E7F746220C784E00D047BE /* UIAlertControllerX.swift in Sources */,
 				A2E7F74D220C784E00D047BE /* Queue.swift in Sources */,
 				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
-				A2039BB3220D67D400C67AAD /* WeddingGiftFormVC.swift in Sources */,
+				A2039BB3220D67D400C67AAD /* AddFormVC.swift in Sources */,
 				A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */,
 				A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */,
 				A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */,
@@ -408,13 +421,16 @@
 				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
 				A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */,
 				A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */,
-				A2039BB9220D761500C67AAD /* WeddingGiftFormViewModel.swift in Sources */,
+				A2039BB9220D761500C67AAD /* AddFormViewModel.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
+				A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */,
 				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,
 				A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */,
+				A2039BC3220D8FF400C67AAD /* WeddingGiftTableViewCell.swift in Sources */,
 				A2E7F740220C784E00D047BE /* UIScrollViewX.swift in Sources */,
 				A2E7F743220C784E00D047BE /* UIViewControllerX.swift in Sources */,
 				A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */,
+				A2039BBB220D80CA00C67AAD /* WeddingGiftRealmModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +581,10 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -582,7 +601,10 @@
 				DEVELOPMENT_TEAM = 8W8M6CAUQE;
 				INFOPLIST_FILE = KDWeddingGift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KoingDev.KDWeddingGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

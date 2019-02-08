@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bBh-7S-534">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ចំណងដៃ-->
+        <scene sceneID="5QF-Tg-5jL">
+            <objects>
+                <viewController storyboardIdentifier="WeddingGiftVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nxR-5a-q3d" customClass="WeddingGiftVC" customModule="KDWeddingGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uJK-VO-2fM"/>
+                        <viewControllerLayoutGuide type="bottom" id="z7V-el-8VS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YeF-Ey-NTx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjU-Bf-roT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeddingGiftTableViewCell" rowHeight="100" id="spn-rP-eVW" customClass="WeddingGiftTableViewCell" customModule="KDWeddingGift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spn-rP-eVW" id="XHT-JT-Zkt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHd-lW-hBu">
+                                                    <rect key="frame" x="20" y="39.5" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="NHd-lW-hBu" secondAttribute="trailing" constant="20" id="Kkt-wa-vlJ"/>
+                                                <constraint firstItem="NHd-lW-hBu" firstAttribute="leading" secondItem="XHT-JT-Zkt" secondAttribute="leading" constant="20" id="YGQ-W4-rIp"/>
+                                                <constraint firstItem="NHd-lW-hBu" firstAttribute="centerY" secondItem="XHT-JT-Zkt" secondAttribute="centerY" id="fZX-bS-5Bz"/>
+                                                <constraint firstItem="NHd-lW-hBu" firstAttribute="centerX" secondItem="XHT-JT-Zkt" secondAttribute="centerX" id="hFY-MX-AtB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbName" destination="NHd-lW-hBu" id="UDO-KO-d4U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzU-nx-UcH" customClass="QRScannerButton" customModule="KDWeddingGift" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="588" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MzU-nx-UcH" secondAttribute="height" multiplier="1:1" id="O3W-BD-D5G"/>
+                                    <constraint firstAttribute="width" constant="60" id="qa8-Os-Xb7"/>
+                                </constraints>
+                                <state key="normal" image="qr"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YjU-Bf-roT" firstAttribute="top" secondItem="uJK-VO-2fM" secondAttribute="bottom" id="APR-gH-bmF"/>
+                            <constraint firstItem="YjU-Bf-roT" firstAttribute="leading" secondItem="YeF-Ey-NTx" secondAttribute="leading" id="SGs-vL-CVy"/>
+                            <constraint firstItem="MzU-nx-UcH" firstAttribute="centerY" secondItem="z7V-el-8VS" secondAttribute="top" id="X4T-eE-zUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="YjU-Bf-roT" secondAttribute="trailing" id="aFY-Mq-hTF"/>
+                            <constraint firstItem="z7V-el-8VS" firstAttribute="top" secondItem="YjU-Bf-roT" secondAttribute="bottom" id="el6-94-l3q"/>
+                            <constraint firstItem="MzU-nx-UcH" firstAttribute="centerX" secondItem="YeF-Ey-NTx" secondAttribute="centerX" id="tfy-jU-AHp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ចំណងដៃ" image="wedding_gift_unselected" selectedImage="wedding_gift_selected" id="Fow-oY-ln6">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="3"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="ចំណងដៃ" id="WPU-C2-isc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnScanQR" destination="MzU-nx-UcH" id="MgH-hT-fra"/>
+                        <outlet property="tableView" destination="YjU-Bf-roT" id="TcZ-ID-BOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmw-wN-WA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="176.76161919040482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MGH-qm-KUV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bBh-7S-534" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ulN-vX-ptl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nxR-5a-q3d" kind="relationship" relationship="rootViewController" id="gTy-ze-DU2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7I-VE-EWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="176.76161919040482"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qr" width="75" height="75"/>
+        <image name="wedding_gift_selected" width="50" height="50"/>
+        <image name="wedding_gift_unselected" width="50" height="50"/>
+    </resources>
+</document>
