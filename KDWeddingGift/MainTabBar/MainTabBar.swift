@@ -16,7 +16,6 @@ class MainTabBar: UITabBarController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		delegate = self
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .selected)
 		
@@ -34,15 +33,5 @@ extension MainTabBar: UITabBarControllerDelegate {
 			view.bounce()
 		}
 	}
-	
-//	func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//		if viewController is MiddleTabActionVC {
-//			let vc = QRScannerVC.instantiate()
-//			vc.modalPresentationStyle = .overFullScreen
-//			present(vc, animated: true)
-//			return false
-//		}
-//		return true
-//	}
 	
 }
