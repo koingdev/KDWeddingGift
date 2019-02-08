@@ -59,32 +59,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Ly-3ja">
-                                <rect key="frame" x="30" y="192.5" width="280" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (ដុល្លា)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-At-ccp">
-                                        <rect key="frame" x="0.0" y="0.0" width="142" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-fG-QZH">
-                                        <rect key="frame" x="0.0" y="29.5" width="280" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="BQi-Dv-hgh"/>
-                                            <constraint firstAttribute="width" constant="280" id="tXC-eH-Bse"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="rKt-ok-WdP"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-HT-JbE">
-                                <rect key="frame" x="30" y="285" width="280" height="77.5"/>
+                                <rect key="frame" x="30" y="192.5" width="280" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (រៀល)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-OG-33N">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="21.5"/>
@@ -107,6 +83,30 @@
                                     <constraint firstAttribute="width" constant="280" id="VQN-kX-2ax"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Ly-3ja">
+                                <rect key="frame" x="30" y="285" width="280" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (ដុល្លា)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-At-ccp">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-fG-QZH">
+                                        <rect key="frame" x="0.0" y="29.5" width="280" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="BQi-Dv-hgh"/>
+                                            <constraint firstAttribute="width" constant="280" id="tXC-eH-Bse"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="rKt-ok-WdP"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-ue-T2w">
                                 <rect key="frame" x="0.0" y="619" width="375" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,18 +122,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bpJ-El-gIU" firstAttribute="top" secondItem="Iu9-4g-xLn" secondAttribute="bottom" constant="40" id="3te-4k-EDT"/>
-                            <constraint firstItem="rqa-Ly-3ja" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="5Bo-ny-QXU"/>
                             <constraint firstItem="bpJ-El-gIU" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="5Tg-3E-4Pd"/>
                             <constraint firstItem="Iu9-4g-xLn" firstAttribute="centerX" secondItem="MiW-q5-pqC" secondAttribute="centerX" id="5c2-0c-8qu"/>
+                            <constraint firstItem="Omk-HT-JbE" firstAttribute="top" secondItem="bpJ-El-gIU" secondAttribute="bottom" constant="15" id="E5P-Zs-z2g"/>
                             <constraint firstItem="Iu9-4g-xLn" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="GIE-aV-JVB"/>
                             <constraint firstAttribute="trailing" secondItem="hdL-SJ-Qar" secondAttribute="trailing" constant="10" id="Hlp-xf-rPF"/>
-                            <constraint firstItem="Omk-HT-JbE" firstAttribute="top" secondItem="rqa-Ly-3ja" secondAttribute="bottom" constant="15" id="J1h-fm-cnS"/>
                             <constraint firstItem="hdL-SJ-Qar" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="OM5-Ab-n9g"/>
                             <constraint firstItem="Omk-HT-JbE" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="TnH-sR-J5j"/>
+                            <constraint firstItem="rqa-Ly-3ja" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="XeI-OA-CcB"/>
                             <constraint firstItem="kmo-Iv-4ii" firstAttribute="top" secondItem="3rZ-ue-T2w" secondAttribute="bottom" id="fhh-KH-aqP" customClass="KeyboardLayoutConstraint" customModule="KDWeddingGift" customModuleProvider="target"/>
                             <constraint firstAttribute="trailing" secondItem="3rZ-ue-T2w" secondAttribute="trailing" id="lER-vZ-NZP"/>
-                            <constraint firstItem="rqa-Ly-3ja" firstAttribute="top" secondItem="bpJ-El-gIU" secondAttribute="bottom" constant="15" id="ly0-FQ-iKl"/>
                             <constraint firstItem="3rZ-ue-T2w" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" id="out-gL-7L2"/>
+                            <constraint firstItem="rqa-Ly-3ja" firstAttribute="top" secondItem="Omk-HT-JbE" secondAttribute="bottom" constant="15" id="uPi-VY-bjd"/>
                         </constraints>
                     </view>
                     <connections>
