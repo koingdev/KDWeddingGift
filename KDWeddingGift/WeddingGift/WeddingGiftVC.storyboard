@@ -21,33 +21,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjU-Bf-roT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjU-Bf-roT">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeddingGiftTableViewCell" id="spn-rP-eVW" customClass="WeddingGiftTableViewCell" customModule="KDWeddingGift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeddingGiftTableViewCell" rowHeight="100" id="spn-rP-eVW" customClass="WeddingGiftTableViewCell" customModule="KDWeddingGift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spn-rP-eVW" id="XHT-JT-Zkt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oqg-W2-mqf">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oqg-W2-mqf">
                                                     <rect key="frame" x="20" y="10" width="335" height="79.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHd-lW-hBu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KT-ZV-k4G">
-                                                            <rect key="frame" x="0.0" y="30" width="335" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="34" width="335" height="18.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMG-z3-qWd">
-                                                            <rect key="frame" x="0.0" y="59.5" width="335" height="20"/>
+                                                            <rect key="frame" x="0.0" y="62.5" width="335" height="17"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -82,16 +82,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YjU-Bf-roT" firstAttribute="top" secondItem="uJK-VO-2fM" secondAttribute="bottom" id="APR-gH-bmF"/>
+                            <constraint firstItem="z7V-el-8VS" firstAttribute="top" secondItem="YjU-Bf-roT" secondAttribute="bottom" id="Azg-sS-IMD"/>
                             <constraint firstItem="YjU-Bf-roT" firstAttribute="leading" secondItem="YeF-Ey-NTx" secondAttribute="leading" id="SGs-vL-CVy"/>
                             <constraint firstItem="MzU-nx-UcH" firstAttribute="centerY" secondItem="z7V-el-8VS" secondAttribute="top" id="X4T-eE-zUQ"/>
                             <constraint firstAttribute="trailing" secondItem="YjU-Bf-roT" secondAttribute="trailing" id="aFY-Mq-hTF"/>
-                            <constraint firstItem="z7V-el-8VS" firstAttribute="top" secondItem="YjU-Bf-roT" secondAttribute="bottom" id="el6-94-l3q"/>
                             <constraint firstItem="MzU-nx-UcH" firstAttribute="centerX" secondItem="YeF-Ey-NTx" secondAttribute="centerX" id="tfy-jU-AHp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ចំណងដៃ" image="wedding_gift_unselected" selectedImage="wedding_gift_selected" id="Fow-oY-ln6">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="3"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="ចំណងដៃ" image="wedding_gift_unselected" selectedImage="wedding_gift_selected" id="Fow-oY-ln6"/>
                     <navigationItem key="navigationItem" title="ចំណងដៃ" id="WPU-C2-isc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

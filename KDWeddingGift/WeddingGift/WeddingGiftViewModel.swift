@@ -13,6 +13,18 @@ final class WeddingGiftViewModel {
 	
 	var datas: Results<WeddingGiftRealmModel>?
 	
+	var count: Int {
+		return datas?.count ?? 0
+	}
+	
+	func getDollarAmount(index: Int) -> Double {
+		return datas?[index].dollarAmount ?? 0
+	}
+	
+	func getRietAmount(index: Int) -> Double {
+		return datas?[index].rielAmount ?? 0
+	}
+	
 	func getAllDatas(completion: @escaping () -> Void) {
 		WeddingGiftRealmModel.getAll { datas in
 			self.datas = datas

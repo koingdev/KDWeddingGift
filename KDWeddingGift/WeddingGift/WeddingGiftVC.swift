@@ -19,8 +19,10 @@ final class WeddingGiftVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		tableView.delegate = self
 		tableView.dataSource = self
 		
+		// first time fetch
 		viewModel.getAllDatas { [weak self] in
 			self?.tableView.reloadData()
 		}
@@ -43,8 +45,23 @@ final class WeddingGiftVC: UIViewController {
 
 extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let index = indexPath.row
+		let vc = AddFormVC.instantiate()
+		_ = vc.view	// force view to render
+		vc.viewModel.name.value = viewModel.datas?[index].name
+		let dollarAmount = viewModel.getDollarAmount(index: index)
+		if dollarAmount > 0 {
+			vc.viewModel.dollarAmount.value = "\(dollarAmount)"
+		}
+		let rielAmount = viewModel.getRietAmount(index: index)
+		if rielAmount > 0 {
+			vc.viewModel.rielAmount.value = "\(rielAmount)"
+		}
+	}
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.datas?.count ?? 0
+		return viewModel.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

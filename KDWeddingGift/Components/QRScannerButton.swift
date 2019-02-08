@@ -21,12 +21,6 @@ final class QRScannerButton: UIButton {
 		adjustsImageWhenHighlighted = false
 		backgroundColor = UIColor.magenta
 		setImage(#imageLiteral(resourceName: "qr"), for: .normal)
-//		addTarget(self, action: #selector(didTap), for: .touchUpInside)
 	}
-	
-//	@objc func didTap() {
-//		let vc = QRScannerVC.instantiate()
-//		UIViewController.topMostViewController.present(vc, animated: true)
-//	}
 	
 }

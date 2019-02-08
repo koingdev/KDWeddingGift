@@ -100,6 +100,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnGoToAddForm" destination="gQj-v7-BMN" id="2NW-qr-FOd"/>
                         <outlet property="videoPreview" destination="ht7-CY-1VT" id="4II-74-vKE"/>
                     </connections>
                 </viewController>

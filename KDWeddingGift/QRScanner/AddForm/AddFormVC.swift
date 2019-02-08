@@ -30,7 +30,7 @@ final class AddFormVC: UIViewController {
 		viewModel.rielAmount.bidirectionalBind(to: tfAmountRiel.reactive.text)
 		
 		// Event
-		_ = btnAdd.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
+		_ = btnAdd.reactive.controlEvents(.touchUpInside).throttle(seconds: 1).observeNext { [weak self] in
 			guard let self = self else { return }
 			self.viewModel.addWeddingGift { success in
 				if success {

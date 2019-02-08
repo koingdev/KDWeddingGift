@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Bond
 
 final class QRScannerVC: UIViewController {
 	
 	@IBOutlet weak var videoPreview: UIView!
+	@IBOutlet weak var btnGoToAddForm: UIButton!
 	private var videoLayer: CALayer!
 	
 	private var qrCodeReader = AVQRCodeReader()
@@ -22,6 +24,13 @@ final class QRScannerVC: UIViewController {
 		super.viewDidLoad()
 		videoLayer = qrCodeReader.videoPreview
 		videoPreview.layer.addSublayer(videoLayer)
+		
+		// Event
+		_ = btnGoToAddForm.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
+			let vc = AddFormVC.instantiate()
+			vc.didFinishAddData = self?.didFinishAddData
+			self?.present(vc, animated: true)
+		}
 	}
 	
 	override func viewDidLayoutSubviews() {
