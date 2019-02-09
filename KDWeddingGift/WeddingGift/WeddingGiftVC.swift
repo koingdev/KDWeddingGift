@@ -50,7 +50,8 @@ final class WeddingGiftVC: UIViewController {
 			self?.tableView.reloadData()
 		}
 		
-		// Observe search
+		// Observe search name
+		#warning("Implement throttle search ??")
 		_ = viewModel.searchName.skip(first: 2).distinct().observeNext { [weak self] searchName in
 			self?.viewModel.search(name: searchName) {
 				Log.debug("Search name \(searchName)")

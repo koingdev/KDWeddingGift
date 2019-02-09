@@ -39,18 +39,18 @@
                                 <state key="normal" image="close"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bpJ-El-gIU">
-                                <rect key="frame" x="30" y="100" width="280" height="77.5"/>
+                                <rect key="frame" x="30" y="100" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ឈ្មោះ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-6J-bez">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HT0-QA-wks">
-                                        <rect key="frame" x="0.0" y="29.5" width="280" height="48"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="280" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="Gyc-h9-ysP"/>
+                                            <constraint firstAttribute="height" constant="38" id="Gyc-h9-ysP"/>
                                             <constraint firstAttribute="width" constant="280" id="Q7W-Gy-Gc4"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -60,18 +60,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-HT-JbE">
-                                <rect key="frame" x="30" y="192.5" width="280" height="77.5"/>
+                                <rect key="frame" x="30" y="182.5" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (រៀល)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-OG-33N">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pan-En-Nur">
-                                        <rect key="frame" x="0.0" y="29.5" width="280" height="48"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="280" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="4li-cA-kjR"/>
+                                            <constraint firstAttribute="height" constant="38" id="4li-cA-kjR"/>
                                             <constraint firstAttribute="width" constant="280" id="5RN-OL-g08"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -84,18 +84,18 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Ly-3ja">
-                                <rect key="frame" x="30" y="285" width="280" height="77.5"/>
+                                <rect key="frame" x="30" y="265" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (ដុល្លា)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-At-ccp">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-fG-QZH">
-                                        <rect key="frame" x="0.0" y="29.5" width="280" height="48"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="280" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="BQi-Dv-hgh"/>
+                                            <constraint firstAttribute="height" constant="38" id="BQi-Dv-hgh"/>
                                             <constraint firstAttribute="width" constant="280" id="tXC-eH-Bse"/>
                                         </constraints>
                                         <nil key="textColor"/>
