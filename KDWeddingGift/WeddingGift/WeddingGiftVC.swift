@@ -8,6 +8,7 @@
 
 import UIKit
 import Bond
+import RealmSwift
 
 final class WeddingGiftVC: UIViewController {
 	
@@ -16,6 +17,8 @@ final class WeddingGiftVC: UIViewController {
 	lazy var searchController = UISearchController(searchResultsController: nil)
 	
 	let viewModel = WeddingGiftViewModel()
+	
+	var notificationToken: NotificationToken?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -37,13 +40,20 @@ final class WeddingGiftVC: UIViewController {
 		
 		// first time fetch
 		viewModel.getAllDatas { [weak self] in
+			Log.debug("First time get data from Realm")
 			self?.tableView.reloadData()
 		}
 		
-		// Observe
+		// Observe realm db update
+		viewModel.observeWeddingGiftRealmModel { [weak self] in
+			Log.debug("WeddingGiftRealmModel database updated")
+			self?.tableView.reloadData()
+		}
+		
+		// Observe search
 		_ = viewModel.searchName.skip(first: 2).distinct().observeNext { [weak self] searchName in
 			self?.viewModel.search(name: searchName) {
-				Log.debug("SEARCHED")
+				Log.debug("Search name \(searchName)")
 				self?.tableView.reloadData()
 			}
 		}
@@ -52,10 +62,6 @@ final class WeddingGiftVC: UIViewController {
 		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
 			guard let self = self else { return }
 			let vc = QRScannerVC.instantiate()
-			vc.didFinishAddData = {
-				Log.debug("FINISH SUBMIT")
-				self.tableView.reloadData()
-			}
 			self.present(vc, animated: true)
 		}
 	}
@@ -76,14 +82,9 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 				Log.warning("No data to delete at index \(indexPath.row)")
 				return
 			}
-			let id = data.id
 			UIAlertController.alertOkayCancel(title: "តើអ្នកពិតជាចង់លុបទិន្នន័យឈ្មោះ \(data.name)?") { [weak self] _ in
-				self?.viewModel.delete(id: id) { success in
-					if success {
-						tableView.reloadData()
-					} else {
-						Log.warning("Delete data at index \(indexPath.row) failed")
-					}
+				self?.viewModel.delete(object: data) {
+					Log.debug("Delete data at index \(indexPath.row) succeed")
 				}
 			}
 		}
@@ -107,28 +108,12 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 			} else {
 				data = viewModel.datas?[index]
 			}
-			guard let safeData = data else { return }
 			
-			cell.configure(data: safeData) {
+			cell.configure(data: data) {
 				// Tap on cell action
 				let vc = AddFormVC.instantiate()
-				_ = vc.view	// force view to render
-				
 				// For update realm and list from AddForm
-				vc.viewModel.idForUpdate = safeData.id
-				vc.viewModel.name.value = safeData.name
-				let dollarAmount = safeData.dollarAmount
-				if dollarAmount > 0 {
-					vc.viewModel.dollarAmount.value = "\(dollarAmount)"
-				}
-				let rielAmount = safeData.rielAmount
-				if rielAmount > 0 {
-					vc.viewModel.rielAmount.value = "\(rielAmount)"
-				}
-				vc.didFinishAddData = {
-					Log.debug("FINISH UPDATE")
-					self.tableView.reloadData()
-				}
+				vc.viewModel.weddingGiftRealmOjectForUpdate = data
 				self.present(vc, animated: true)
 			}
 		}
@@ -148,10 +133,6 @@ extension WeddingGiftVC: UISearchResultsUpdating {
 	
 	func updateSearchResults(for searchController: UISearchController) {
 		viewModel.searchName.value = searchController.searchBar.text ?? ""
-//		viewModel.search(name: searchController.searchBar.text) { [weak self] in
-//			Log.debug("SEARCHED")
-//			self?.tableView.reloadData()
-//		}
 	}
 	
 }

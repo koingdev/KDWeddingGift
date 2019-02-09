@@ -10,14 +10,29 @@ import Bond
 
 final class AddFormViewModel {
 	
-	// if id > -1 => update
-	// if id == -1 => insert
-	var idForUpdate = -1
+	// Receive data from tableview datasource when user tap on any row
+	// For update
+	var weddingGiftRealmOjectForUpdate: WeddingGiftRealmModel? {
+		didSet {
+			// Set form value
+			name.value = weddingGiftRealmOjectForUpdate?.name
+			let dollar = weddingGiftRealmOjectForUpdate?.dollarAmount ?? 0
+			dollarAmount.value = String(describing: dollar)
+			let riel = weddingGiftRealmOjectForUpdate?.rielAmount ?? 0
+			rielAmount.value = String(describing: riel)
+		}
+	}
 	
 	// Binding
 	let name = Observable<String?>("")
 	var dollarAmount = Observable<String?>("")
 	var rielAmount = Observable<String?>("")
+	
+	let realmService: RealmOperation!
+	
+	init(realmService: RealmOperation = RealmService()) {
+		self.realmService = realmService
+	}
 	
 	// Getter
 	private var getName: String {
@@ -39,19 +54,26 @@ final class AddFormViewModel {
 		return isNameNotEmpty && (isDollarAmountNotEmpty || isRielAmountNotEmpty)
 	}
 	
-	func submitWeddingGift(completion: ((Bool) -> Void)? = nil) {
+	func submitWeddingGift(completion: (Bool) -> Void) {
 		if isFormValid() {
 			// Update operation
-			if idForUpdate > -1 {
-				WeddingGiftRealmModel.update(id: idForUpdate, name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount, completion: completion)
+			if let object = weddingGiftRealmOjectForUpdate {
+				realmService.updateBlock {
+					// updated value
+					object.name = getName
+					object.dollarAmount = getDollarAmount
+					object.rielAmount = getRielAmount
+					completion(true)
+				}
 				
 			} else { // Add new
 				let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-				WeddingGiftRealmModel.write(object: object, completion: completion)
-				
+				realmService.write(object: object) {
+					completion(true)
+				}
 			}
 		} else {
-			completion?(false)
+			completion(false)
 		}
 	}
 	

@@ -18,9 +18,6 @@ final class AddFormVC: UIViewController {
 	
 	let viewModel = AddFormViewModel()
 	
-	// Observe when data added to reload WeddingGift tableView
-	var didFinishAddData: (() -> Void)?
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -34,7 +31,6 @@ final class AddFormVC: UIViewController {
 			guard let self = self else { return }
 			self.viewModel.submitWeddingGift { success in
 				if success {
-					self.didFinishAddData?()
 					UIViewController.topMostViewController.dismiss(animated: true)
 				} else {
 					Log.warning("Submit data failed")
