@@ -76,7 +76,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -100,7 +100,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -118,26 +118,40 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ទិន្នន័យបញ្ចូលមិនត្រឹមត្រូវ !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLR-Ub-mE4">
+                                <rect key="frame" x="40" y="392.5" width="295" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZIE-uy-Tya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bpJ-El-gIU" firstAttribute="top" secondItem="Iu9-4g-xLn" secondAttribute="bottom" constant="40" id="3te-4k-EDT"/>
                             <constraint firstItem="bpJ-El-gIU" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="5Tg-3E-4Pd"/>
                             <constraint firstItem="Iu9-4g-xLn" firstAttribute="centerX" secondItem="MiW-q5-pqC" secondAttribute="centerX" id="5c2-0c-8qu"/>
+                            <constraint firstItem="hLR-Ub-mE4" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="40" id="5pV-Qk-hel"/>
                             <constraint firstItem="Omk-HT-JbE" firstAttribute="top" secondItem="bpJ-El-gIU" secondAttribute="bottom" constant="15" id="E5P-Zs-z2g"/>
+                            <constraint firstItem="hLR-Ub-mE4" firstAttribute="centerX" secondItem="MiW-q5-pqC" secondAttribute="centerX" id="EX3-Vp-g7i"/>
                             <constraint firstItem="Iu9-4g-xLn" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="GIE-aV-JVB"/>
                             <constraint firstAttribute="trailing" secondItem="hdL-SJ-Qar" secondAttribute="trailing" constant="10" id="Hlp-xf-rPF"/>
                             <constraint firstItem="hdL-SJ-Qar" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="OM5-Ab-n9g"/>
                             <constraint firstItem="Omk-HT-JbE" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="TnH-sR-J5j"/>
                             <constraint firstItem="rqa-Ly-3ja" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="XeI-OA-CcB"/>
+                            <constraint firstItem="hLR-Ub-mE4" firstAttribute="top" secondItem="rqa-Ly-3ja" secondAttribute="bottom" constant="60" id="auu-sO-vKR"/>
                             <constraint firstItem="kmo-Iv-4ii" firstAttribute="top" secondItem="3rZ-ue-T2w" secondAttribute="bottom" id="fhh-KH-aqP" customClass="KeyboardLayoutConstraint" customModule="KDWeddingGift" customModuleProvider="target"/>
                             <constraint firstAttribute="trailing" secondItem="3rZ-ue-T2w" secondAttribute="trailing" id="lER-vZ-NZP"/>
                             <constraint firstItem="3rZ-ue-T2w" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" id="out-gL-7L2"/>
                             <constraint firstItem="rqa-Ly-3ja" firstAttribute="top" secondItem="Omk-HT-JbE" secondAttribute="bottom" constant="15" id="uPi-VY-bjd"/>
+                            <constraint firstAttribute="trailing" secondItem="hLR-Ub-mE4" secondAttribute="trailing" constant="40" id="wt4-Lp-5HB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnAdd" destination="3rZ-ue-T2w" id="a3o-fD-sFL"/>
+                        <outlet property="lbError" destination="hLR-Ub-mE4" id="7ks-nq-TUg"/>
                         <outlet property="tfAmountDollar" destination="hsT-fG-QZH" id="euI-gp-Rr5"/>
                         <outlet property="tfAmountRiel" destination="pan-En-Nur" id="kie-3w-uGM"/>
                         <outlet property="tfName" destination="HT0-QA-wks" id="Yb2-8H-iqB"/>

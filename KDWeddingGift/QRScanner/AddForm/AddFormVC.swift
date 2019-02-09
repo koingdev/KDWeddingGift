@@ -15,6 +15,7 @@ final class AddFormVC: UIViewController {
 	@IBOutlet weak var tfAmountDollar: UITextField!
 	@IBOutlet weak var tfAmountRiel: UITextField!
 	@IBOutlet weak var btnAdd: UIButton!
+	@IBOutlet weak var lbError: UILabel!
 	
 	let viewModel = AddFormViewModel()
 	
@@ -36,6 +37,9 @@ final class AddFormVC: UIViewController {
 					Log.warning("Submit data failed")
 				}
 				self.view.endEditing(true)
+				
+				// error label
+				self.lbError.isHidden = success
 			}
 		}
 	}
