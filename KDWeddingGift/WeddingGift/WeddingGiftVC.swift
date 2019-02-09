@@ -51,8 +51,8 @@ final class WeddingGiftVC: UIViewController {
 		}
 		
 		// Observe search name
-		#warning("Implement throttle search ??")
-		_ = viewModel.searchName.skip(first: 2).distinct().observeNext { [weak self] searchName in
+		// Debounce: Fire an event only if it's not followed by another event within 0.5 seconds
+		_ = viewModel.searchName.skip(first: 2).debounce(interval: 0.5, on: .main).distinct().observeNext { [weak self] searchName in
 			self?.viewModel.search(name: searchName) {
 				Log.debug("Search name \(searchName)")
 				self?.tableView.reloadData()
