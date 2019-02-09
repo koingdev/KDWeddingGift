@@ -37,6 +37,24 @@ class WeddingGiftRealmModel: Object {
 
 extension WeddingGiftRealmModel {
 	
+	static func getRielTotal() -> Double {
+		let realm = try! Realm()
+		let result: Double = realm.objects(WeddingGiftRealmModel.self).sum(ofProperty: "rielAmount")
+		return result
+	}
+	
+	static func getDollarTotal() -> Double {
+		let realm = try! Realm()
+		let result: Double = realm.objects(WeddingGiftRealmModel.self).sum(ofProperty: "dollarAmount")
+		return result
+	}
+	
+	static func getTotalCustomer() -> Int {
+		let realm = try! Realm()
+		let result: Int = realm.objects(WeddingGiftRealmModel.self).count
+		return result
+	}
+	
 	static func getAll(completion: @escaping (Results<WeddingGiftRealmModel>) -> Void) {
 		Queue.background {
 			let realm = try! Realm()

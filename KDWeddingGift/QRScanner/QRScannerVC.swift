@@ -32,6 +32,9 @@ final class QRScannerVC: UIViewController {
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		videoLayer.frame = videoPreview.bounds
+		
+		// Animation
+		btnGoToAddForm.popIn()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

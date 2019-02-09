@@ -17,6 +17,7 @@
 		A2039BC3220D8FF400C67AAD /* WeddingGiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */; };
 		A2039BC5220DC81700C67AAD /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC4220DC81700C67AAD /* HighlightView.swift */; };
 		A23D1966220F22C9001FFF34 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1965220F22C9001FFF34 /* RealmService.swift */; };
+		A23D1968220F3586001FFF34 /* TotalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */; };
 		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
@@ -46,8 +47,8 @@
 		A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */; };
 		A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F756220C97FD00D047BE /* QRScannerVC.swift */; };
 		A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F758220C981500D047BE /* QRScannerVC.storyboard */; };
-		A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F760220C9CEA00D047BE /* ReportVC.swift */; };
-		A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */; };
+		A2E7F761220C9CEA00D047BE /* TotalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F760220C9CEA00D047BE /* TotalRecordVC.swift */; };
+		A2E7F763220C9CFC00D047BE /* TotalRecordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F762220C9CFC00D047BE /* TotalRecordVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftTableViewCell.swift; sourceTree = "<group>"; };
 		A2039BC4220DC81700C67AAD /* HighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightView.swift; sourceTree = "<group>"; };
 		A23D1965220F22C9001FFF34 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecordViewModel.swift; sourceTree = "<group>"; };
 		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
@@ -94,8 +96,8 @@
 		A2E7F753220C93EB00D047BE /* WeddingGiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeddingGiftVC.storyboard; sourceTree = "<group>"; };
 		A2E7F756220C97FD00D047BE /* QRScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerVC.swift; sourceTree = "<group>"; };
 		A2E7F758220C981500D047BE /* QRScannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerVC.storyboard; sourceTree = "<group>"; };
-		A2E7F760220C9CEA00D047BE /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
-		A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportVC.storyboard; sourceTree = "<group>"; };
+		A2E7F760220C9CEA00D047BE /* TotalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecordVC.swift; sourceTree = "<group>"; };
+		A2E7F762220C9CFC00D047BE /* TotalRecordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TotalRecordVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,7 @@
 				A2E7F74F220C81FC00D047BE /* MainTabBar */,
 				A2E7F750220C93BD00D047BE /* WeddingGift */,
 				A2E7F755220C950D00D047BE /* QRScanner */,
-				A2E7F75F220C9CD900D047BE /* Report */,
+				A2E7F75F220C9CD900D047BE /* TotalRecord */,
 				A2E7F715220C772F00D047BE /* AppDelegate.swift */,
 				A2E7F71C220C773000D047BE /* Assets.xcassets */,
 				A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */,
@@ -265,13 +267,14 @@
 			path = QRScanner;
 			sourceTree = "<group>";
 		};
-		A2E7F75F220C9CD900D047BE /* Report */ = {
+		A2E7F75F220C9CD900D047BE /* TotalRecord */ = {
 			isa = PBXGroup;
 			children = (
-				A2E7F760220C9CEA00D047BE /* ReportVC.swift */,
-				A2E7F762220C9CFC00D047BE /* ReportVC.storyboard */,
+				A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */,
+				A2E7F760220C9CEA00D047BE /* TotalRecordVC.swift */,
+				A2E7F762220C9CFC00D047BE /* TotalRecordVC.storyboard */,
 			);
-			path = Report;
+			path = TotalRecord;
 			sourceTree = "<group>";
 		};
 		DF078FFD84F435E03319D9FD /* Frameworks */ = {
@@ -345,7 +348,7 @@
 				A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */,
 				A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */,
 				A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */,
-				A2E7F763220C9CFC00D047BE /* ReportVC.storyboard in Resources */,
+				A2E7F763220C9CFC00D047BE /* TotalRecordVC.storyboard in Resources */,
 				A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */,
 				A2039BB5220D67DD00C67AAD /* AddFormVC.storyboard in Resources */,
 				A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */,
@@ -414,6 +417,7 @@
 				A2039BB7220D6CFA00C67AAD /* CloseButton.swift in Sources */,
 				A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */,
 				A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */,
+				A23D1968220F3586001FFF34 /* TotalRecordViewModel.swift in Sources */,
 				A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */,
 				A2E7F741220C784E00D047BE /* UIButtonX.swift in Sources */,
 				A2E7F74A220C784E00D047BE /* EmojiString.swift in Sources */,
@@ -428,7 +432,7 @@
 				A2E7F752220C93E000D047BE /* WeddingGiftVC.swift in Sources */,
 				A2E7F742220C784E00D047BE /* UILabelX.swift in Sources */,
 				A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */,
-				A2E7F761220C9CEA00D047BE /* ReportVC.swift in Sources */,
+				A2E7F761220C9CEA00D047BE /* TotalRecordVC.swift in Sources */,
 				A2039BB9220D761500C67AAD /* AddFormViewModel.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
 				A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */,

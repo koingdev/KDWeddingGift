@@ -13,6 +13,9 @@ final class QRScannerButton: UIButton {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		setUp()
+		
+		// Animation
+		popIn()
 	}
 	
 	private func setUp() {

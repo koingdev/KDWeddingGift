@@ -11,7 +11,7 @@ import UIKit
 class MainTabBar: UITabBarController {
 	
 	lazy var weddingGiftVC = WeddingGiftVC.instantiate()
-	lazy var reportVC = ReportVC.instantiate()
+	lazy var reportVC = TotalRecordVC.instantiate()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
