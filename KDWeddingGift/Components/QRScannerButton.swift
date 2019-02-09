@@ -18,6 +18,7 @@ final class QRScannerButton: UIButton {
 	private func setUp() {
 		bounceable = true
 		cornerRadius = bounds.size.width / 2
+		isExclusiveTouch = true
 		adjustsImageWhenHighlighted = false
 		backgroundColor = UIColor.magenta
 		setImage(#imageLiteral(resourceName: "qr"), for: .normal)

@@ -13,6 +13,7 @@ final class CloseButton: UIButton {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		bounceable = true
+		isExclusiveTouch = true
 		setImage(#imageLiteral(resourceName: "close"), for: .normal)
 		addTarget(self, action: #selector(didTap), for: .touchUpInside)
 	}
