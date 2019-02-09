@@ -83,11 +83,15 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 				Log.warning("No data to delete at index \(indexPath.row)")
 				return
 			}
-			UIAlertController.alertOkayCancel(title: "តើអ្នកពិតជាចង់លុបទិន្នន័យឈ្មោះ \(data.name)?") { [weak self] _ in
-				self?.viewModel.delete(object: data) {
-					Log.debug("Delete data at index \(indexPath.row) succeed")
-				}
-			}
+			
+			UIAlertController.Builder()
+					.withTitleAndMessage(title: "តើអ្នកពិតជាចង់លុបទិន្នន័យឈ្មោះ \(data.name)?")
+					.addAction(title: "ទេ", style: .cancel)
+					.addAction(title: "ព្រម", style: .destructive) { [weak self] _ in
+						self?.viewModel.delete(object: data) {
+							Log.debug("Delete data at index \(indexPath.row) succeed")
+						}
+					}.show()
 		}
 	}
 	
