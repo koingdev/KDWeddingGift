@@ -22,6 +22,10 @@ final class AddFormVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		// Delegate
+		tfAmountRiel.delegate = self
+		tfAmountDollar.delegate = self
+		
 		// Binding
 		viewModel.name.bidirectionalBind(to: tfName.reactive.text)
 		viewModel.dollarAmount.bidirectionalBind(to: tfAmountDollar.reactive.text)
@@ -42,6 +46,18 @@ final class AddFormVC: UIViewController {
 				self.lbError.isHidden = success
 			}
 		}
+	}
+	
+}
+
+// MARK: TextField Delegate
+
+extension AddFormVC: UITextFieldDelegate {
+	
+	// Restrict user input, allow only decimal
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		let invalidCharacters = CharacterSet(charactersIn: ".0123456789").inverted
+		return string.rangeOfCharacter(from: invalidCharacters) == nil
 	}
 	
 }
