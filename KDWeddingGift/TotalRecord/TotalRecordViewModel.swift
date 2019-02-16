@@ -22,5 +22,14 @@ final class TotalRecordViewModel {
 		return "\(WeddingGiftRealmModel.getTotalCustomer()) នាក់"
 	}
 	
+	let realmService: RealmOperation!
+	
+	init(realmService: RealmOperation = RealmService()) {
+		self.realmService = realmService
+	}
+	
+	func observeWeddingGiftRealmModel(completion: @escaping () -> Void) {
+		realmService.observeDatabaseChanged(completion: completion)
+	}
 	
 }

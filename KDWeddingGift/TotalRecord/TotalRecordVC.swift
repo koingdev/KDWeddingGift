@@ -21,6 +21,15 @@ final class TotalRecordVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		// Get total first time
+		setTotals()
+		
+		// Realm data change ?
+		viewModel.observeWeddingGiftRealmModel { [weak self] in
+			self?.setTotals()
+			Log.debug("Refresh total")
+		}
+		
 		// Event
 		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
 			guard let self = self else { return }
@@ -29,11 +38,7 @@ final class TotalRecordVC: UIViewController {
 		}
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-		Log.debug("Refresh total amount")
-		// Refresh total
+	private func setTotals() {
 		lbRielTotal.text = viewModel.rielTotal
 		lbDollarTotal.text = viewModel.dollarTotal
 		lbTotalCustomer.text = viewModel.totalCustomer

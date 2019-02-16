@@ -8,7 +8,6 @@
 
 import UIKit
 import Bond
-import RealmSwift
 
 final class WeddingGiftVC: UIViewController {
 	
@@ -17,8 +16,6 @@ final class WeddingGiftVC: UIViewController {
 	lazy var searchController = UISearchController(searchResultsController: nil)
 	
 	let viewModel = WeddingGiftViewModel()
-	
-	var notificationToken: NotificationToken?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -44,12 +41,6 @@ final class WeddingGiftVC: UIViewController {
 			self?.tableView.reloadData()
 		}
 		
-		// Observe realm db update
-		viewModel.observeWeddingGiftRealmModel { [weak self] in
-			Log.debug("WeddingGiftRealmModel database updated")
-			self?.tableView.reloadData()
-		}
-		
 		// Observe search name
 		// Debounce: Fire an event only if it's not followed by another event within 0.5 seconds
 		_ = viewModel.searchName.skip(first: 2).debounce(interval: 0.5, on: .main).distinct().observeNext { [weak self] searchName in
@@ -62,16 +53,47 @@ final class WeddingGiftVC: UIViewController {
 		// Event
 		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
 			guard let self = self else { return }
+			
 			let vc = QRScannerVC.instantiate()
+			// Finish add new data ?
+			vc.didFinishAddNewData = {
+				let firstRow = IndexPath(item: 0, section: 0)
+				self.tableView.performAction(.insert, at: firstRow)
+			}
 			self.present(vc, animated: true)
 		}
 	}
 	
 }
 
-// MARK: Delegate
+// MARK: TableView
 
 extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
+	
+	// MARK: - Delegate
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let vc = AddFormVC.instantiate()
+		
+		// Filter ?
+		if isFiltering() {
+			// For update realm and list from AddForm
+			vc.viewModel.weddingGiftRealmOjectForUpdate = viewModel.filteredDatas?[indexPath.row]
+		} else {
+			// For update realm and list from AddForm
+			vc.viewModel.weddingGiftRealmOjectForUpdate = viewModel.datas?[indexPath.row]
+		}
+		
+		vc.didFinishUpdateData = { [weak self] in
+			self?.tableView.performAction(.reload, at: indexPath)
+		}
+		present(vc, animated: true)
+		
+		// Reset selection after 1sec
+		Queue.runAfter(1) { [weak self] in
+			self?.tableView.deselectRow(at: indexPath, animated: true)
+		}
+	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return true
@@ -89,11 +111,14 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 					.addAction(title: "ទេ", style: .cancel)
 					.addAction(title: "ព្រម", style: .destructive) { [weak self] _ in
 						self?.viewModel.delete(object: data) {
+							self?.tableView.performAction(.delete, at: indexPath)
 							Log.debug("Delete data at index \(indexPath.row) succeed")
 						}
 					}.show()
 		}
 	}
+	
+	// MARK: - DataSource
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if isFiltering() {
@@ -105,6 +130,7 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(of: WeddingGiftTableViewCell.self, for: indexPath) { [weak self] cell in
 			guard let self = self else { return }
+			
 			let index = indexPath.row
 			var data: WeddingGiftRealmModel?
 			// Filter ?
@@ -113,14 +139,7 @@ extension WeddingGiftVC: UITableViewDelegate, UITableViewDataSource {
 			} else {
 				data = viewModel.datas?[index]
 			}
-			
-			cell.configure(data: data) {
-				// Tap on cell action
-				let vc = AddFormVC.instantiate()
-				// For update realm and list from AddForm
-				vc.viewModel.weddingGiftRealmOjectForUpdate = data
-				self.present(vc, animated: true)
-			}
+			cell.configure(data: data)
 		}
 		return cell
 	}

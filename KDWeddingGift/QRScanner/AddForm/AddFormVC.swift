@@ -17,6 +17,8 @@ final class AddFormVC: UIViewController {
 	@IBOutlet weak var btnAdd: UIButton!
 	@IBOutlet weak var lbError: UILabel!
 	
+	var didFinishAddNewData: (() -> Void)?
+	var didFinishUpdateData: (() -> Void)?
 	let viewModel = AddFormViewModel()
 	
 	override func viewDidLoad() {
@@ -34,17 +36,36 @@ final class AddFormVC: UIViewController {
 		// Event
 		_ = btnAdd.reactive.controlEvents(.touchUpInside).throttle(seconds: 1).observeNext { [weak self] in
 			guard let self = self else { return }
-			self.viewModel.submitWeddingGift { success in
-				if success {
-					UIViewController.topMostViewController.dismiss(animated: true)
-				} else {
-					Log.warning("Submit data failed")
+			
+			// Update
+			if self.viewModel.isUpdateForm() {
+				self.viewModel.updateWeddingGift { success in
+					if success {
+						self.didFinishUpdateData?()
+						UIViewController.topMostViewController.dismiss(animated: true)
+						Log.debug("Update data succeed")
+					} else {
+						Log.warning("Update data failed")
+					}
+					// error label
+					self.lbError.isHidden = success
 				}
-				self.view.endEditing(true)
 				
-				// error label
-				self.lbError.isHidden = success
+			} else { // Add new
+				self.viewModel.addNewWeddingGift { success in
+					if success {
+						self.didFinishAddNewData?()
+						UIViewController.topMostViewController.dismiss(animated: true)
+						Log.debug("Add new data succeed")
+					} else {
+						Log.warning("Add new data failed")
+					}
+					// error label
+					self.lbError.isHidden = success
+				}
 			}
+			
+			self.view.endEditing(true)
 		}
 	}
 	

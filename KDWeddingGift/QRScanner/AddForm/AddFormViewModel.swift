@@ -54,23 +54,34 @@ final class AddFormViewModel {
 		return isNameNotEmpty && (isDollarAmountNotEmpty || isRielAmountNotEmpty)
 	}
 	
-	func submitWeddingGift(completion: (Bool) -> Void) {
+	func isUpdateForm() -> Bool {
+		return weddingGiftRealmOjectForUpdate != nil
+	}
+	
+	func updateWeddingGift(completion: (Bool) -> Void) {
 		if isFormValid() {
 			// Update operation
-			if let object = weddingGiftRealmOjectForUpdate {
-				realmService.updateBlock {
-					// updated value
-					object.name = getName
-					object.dollarAmount = getDollarAmount
-					object.rielAmount = getRielAmount
-					completion(true)
-				}
-				
-			} else { // Add new
-				let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-				realmService.write(object: object) {
-					completion(true)
-				}
+			guard let object = weddingGiftRealmOjectForUpdate else {
+				Log.warning("Cannot update because weddingGiftRealmOjectForUpdate is nil")
+				return
+			}
+			realmService.updateBlock {
+				// updated value
+				object.name = getName
+				object.dollarAmount = getDollarAmount
+				object.rielAmount = getRielAmount
+				completion(true)
+			}
+		} else {
+			completion(false)
+		}
+	}
+	
+	func addNewWeddingGift(completion: (Bool) -> Void) {
+		if isFormValid() {
+			let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
+			realmService.write(object: object) {
+				completion(true)
 			}
 		} else {
 			completion(false)

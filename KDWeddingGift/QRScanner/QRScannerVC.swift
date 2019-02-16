@@ -15,6 +15,7 @@ final class QRScannerVC: UIViewController {
 	@IBOutlet weak var btnGoToAddForm: UIButton!
 	private var videoLayer: CALayer!
 	
+	var didFinishAddNewData: (() -> Void)?
 	private var qrCodeReader = AVQRCodeReader()
 	
 	override func viewDidLoad() {
@@ -25,6 +26,7 @@ final class QRScannerVC: UIViewController {
 		// Event
 		_ = btnGoToAddForm.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
 			let vc = AddFormVC.instantiate()
+			vc.didFinishAddNewData = self?.didFinishAddNewData
 			self?.present(vc, animated: true)
 		}
 	}

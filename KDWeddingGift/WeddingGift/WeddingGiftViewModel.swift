@@ -29,10 +29,6 @@ final class WeddingGiftViewModel {
 		return filteredDatas?.count ?? 0
 	}
 	
-	func observeWeddingGiftRealmModel(completion: @escaping () -> Void) {
-		realmService.observeDatabaseChanged(completion: completion)
-	}
-	
 	func delete(object: Object, completion: () -> Void) {
 		realmService.delete(object: object, completion: completion)
 	}
