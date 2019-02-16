@@ -36,7 +36,7 @@ final class AddFormViewModel {
 	
 	// Getter
 	private var getName: String {
-		return name.value ?? ""
+		return name.value?.trimmingCharacters(in: .whitespaces) ?? ""
 	}
 	private var getDollarAmount: Double {
 		let dollar = Double(dollarAmount.value ?? "") ?? 0.0
@@ -47,18 +47,19 @@ final class AddFormViewModel {
 		return riel
 	}
 	
-	func isFormValid() -> Bool {
+	func isMoneyValid() -> Bool {
 		// Input money more than one dot ?
 		let isValidDollar = (dollarAmount.value?.filter { $0 == "." }.count ?? 0) <= 1
 		let isValidRiel = (rielAmount.value?.filter { $0 == "." }.count ?? 0) <= 1
-		if !isValidDollar || !isValidRiel {
-			return false
-		}
+		return isValidDollar && isValidRiel
+	}
+	
+	func isFormValid() -> Bool {
 		// Not empty ?
 		let isNameNotEmpty = !getName.isEmpty
 		let isDollarAmountNotEmpty = getDollarAmount > 0
 		let isRielAmountNotEmpty = getRielAmount > 0
-		return isNameNotEmpty && (isDollarAmountNotEmpty || isRielAmountNotEmpty)
+		return isMoneyValid() && isNameNotEmpty && (isDollarAmountNotEmpty || isRielAmountNotEmpty)
 	}
 	
 	func isUpdateForm() -> Bool {
