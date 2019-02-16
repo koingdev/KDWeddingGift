@@ -48,6 +48,13 @@ final class AddFormViewModel {
 	}
 	
 	func isFormValid() -> Bool {
+		// More than one dot ?
+		let isValidDollar = (dollarAmount.value?.filter { $0 == "." }.count ?? 0) <= 1
+		let isValidRiel = (rielAmount.value?.filter { $0 == "." }.count ?? 0) <= 1
+		if !isValidDollar || !isValidRiel {
+			return false
+		}
+		// Not empty ?
 		let isNameNotEmpty = !getName.isEmpty
 		let isDollarAmountNotEmpty = getDollarAmount > 0
 		let isRielAmountNotEmpty = getRielAmount > 0
