@@ -21,17 +21,20 @@ final class WeddingGiftVC: UIViewController {
 		super.viewDidLoad()
 		
 		// Search bar
+		searchController.searchResultsUpdater = self
+		searchController.searchBar.placeholder = "ស្វែងរក"
+		searchController.dimsBackgroundDuringPresentation = false
+		searchController.hidesNavigationBarDuringPresentation = false
+		searchController.searchBar.tintColor = .magenta
 		if #available(iOS 11.0, *) {
-			searchController.searchResultsUpdater = self
-			searchController.searchBar.placeholder = "ស្វែងរក"
-			searchController.obscuresBackgroundDuringPresentation = false
+			definesPresentationContext = true
 			navigationItem.searchController = searchController
 			navigationItem.hidesSearchBarWhenScrolling = true
-			definesPresentationContext = true
 		} else {
 			// Fallback on earlier versions
+			tableView.tableHeaderView = searchController.searchBar
 		}
-		
+	
 		tableView.delegate = self
 		tableView.dataSource = self
 		
