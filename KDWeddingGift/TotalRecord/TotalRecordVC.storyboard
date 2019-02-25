@@ -21,15 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-BW-04K" customClass="QRScannerButton" customModule="KDWeddingGift" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="588" width="60" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Mdr-BW-04K" secondAttribute="height" multiplier="1:1" id="Bjb-0Q-Coj"/>
-                                    <constraint firstAttribute="width" constant="60" id="K54-3f-arp"/>
-                                </constraints>
-                                <state key="normal" image="qr"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-HP-e2G">
                                 <rect key="frame" x="40" y="243.5" width="295" height="180"/>
                                 <subviews>
@@ -78,11 +69,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pCn-8f-8C6" firstAttribute="leading" secondItem="GDA-gS-vZb" secondAttribute="leading" constant="20" id="2hC-FD-5vL"/>
-                            <constraint firstItem="Mdr-BW-04K" firstAttribute="centerX" secondItem="GDA-gS-vZb" secondAttribute="centerX" id="5nM-da-AS7"/>
                             <constraint firstItem="CAb-HP-e2G" firstAttribute="leading" secondItem="GDA-gS-vZb" secondAttribute="leading" constant="40" id="6hQ-6r-DWv"/>
                             <constraint firstItem="h8Y-nD-p90" firstAttribute="top" secondItem="pCn-8f-8C6" secondAttribute="bottom" constant="40" id="8UG-Zg-Z3j"/>
                             <constraint firstAttribute="trailing" secondItem="pCn-8f-8C6" secondAttribute="trailing" constant="20" id="NIt-9y-ECw"/>
-                            <constraint firstItem="Mdr-BW-04K" firstAttribute="centerY" secondItem="h8Y-nD-p90" secondAttribute="top" id="VDU-4S-DgA"/>
                             <constraint firstItem="CAb-HP-e2G" firstAttribute="centerY" secondItem="GDA-gS-vZb" secondAttribute="centerY" id="XjL-gs-8vi"/>
                             <constraint firstItem="CAb-HP-e2G" firstAttribute="centerX" secondItem="GDA-gS-vZb" secondAttribute="centerX" id="wo9-bV-iQg"/>
                             <constraint firstAttribute="trailing" secondItem="CAb-HP-e2G" secondAttribute="trailing" constant="40" id="xfn-1q-HqS"/>
@@ -92,7 +81,6 @@
                     <navigationItem key="navigationItem" title="សរុប" id="kSM-yi-Udi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnScanQR" destination="Mdr-BW-04K" id="6Ve-YT-u4O"/>
                         <outlet property="lbDollarTotal" destination="AoQ-oS-VLY" id="QmJ-G6-VqF"/>
                         <outlet property="lbRielTotal" destination="35d-l6-iaF" id="dFI-db-bt9"/>
                         <outlet property="lbTotalCustomer" destination="pCn-8f-8C6" id="VjK-CH-yyt"/>
@@ -122,7 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qr" width="75" height="75"/>
         <image name="report_selected" width="50" height="50"/>
         <image name="report_unselected" width="50" height="50"/>
     </resources>

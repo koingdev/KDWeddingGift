@@ -12,7 +12,6 @@ import Bond
 final class WeddingGiftVC: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
-	@IBOutlet weak var btnScanQR: QRScannerButton!
 	lazy var searchController = UISearchController(searchResultsController: nil)
 	
 	let viewModel = WeddingGiftViewModel()
@@ -25,7 +24,7 @@ final class WeddingGiftVC: UIViewController {
 		searchController.searchBar.placeholder = "ស្វែងរក"
 		searchController.dimsBackgroundDuringPresentation = false
 		searchController.hidesNavigationBarDuringPresentation = false
-		searchController.searchBar.tintColor = .magenta
+		searchController.searchBar.tintColor = UIColor.main
 		if #available(iOS 11.0, *) {
 			definesPresentationContext = true
 			navigationItem.searchController = searchController
@@ -45,25 +44,12 @@ final class WeddingGiftVC: UIViewController {
 		}
 		
 		// Observe search name
-		// Debounce: Fire an event only if it's not followed by another event within 0.5 seconds
-		_ = viewModel.searchName.skip(first: 2).debounce(interval: 0.5, on: .main).distinct().observeNext { [weak self] searchName in
+		// Debounce: Fire an event only if it's not followed by another event within 0.3 seconds
+		_ = viewModel.searchName.skip(first: 2).debounce(interval: 0.3, on: .main).distinct().observeNext { [weak self] searchName in
 			self?.viewModel.search(name: searchName) {
 				Log.debug("Search name \(searchName)")
 				self?.tableView.reloadData()
 			}
-		}
-		
-		// Event
-		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
-			guard let self = self else { return }
-			
-			let vc = QRScannerVC.instantiate()
-			// Finish add new data ?
-			vc.didFinishAddNewData = {
-				let firstRow = IndexPath(item: 0, section: 0)
-				self.tableView.performAction(.insert, at: firstRow)
-			}
-			self.present(vc, animated: true)
 		}
 	}
 	

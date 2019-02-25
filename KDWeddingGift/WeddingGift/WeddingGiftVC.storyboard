@@ -77,31 +77,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzU-nx-UcH" customClass="QRScannerButton" customModule="KDWeddingGift" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="588" width="60" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="MzU-nx-UcH" secondAttribute="height" multiplier="1:1" id="O3W-BD-D5G"/>
-                                    <constraint firstAttribute="width" constant="60" id="qa8-Os-Xb7"/>
-                                </constraints>
-                                <state key="normal" image="qr"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YjU-Bf-roT" firstAttribute="top" secondItem="uJK-VO-2fM" secondAttribute="bottom" id="APR-gH-bmF"/>
                             <constraint firstItem="z7V-el-8VS" firstAttribute="top" secondItem="YjU-Bf-roT" secondAttribute="bottom" id="Azg-sS-IMD"/>
                             <constraint firstItem="YjU-Bf-roT" firstAttribute="leading" secondItem="YeF-Ey-NTx" secondAttribute="leading" id="SGs-vL-CVy"/>
-                            <constraint firstItem="MzU-nx-UcH" firstAttribute="centerY" secondItem="z7V-el-8VS" secondAttribute="top" id="X4T-eE-zUQ"/>
                             <constraint firstAttribute="trailing" secondItem="YjU-Bf-roT" secondAttribute="trailing" id="aFY-Mq-hTF"/>
-                            <constraint firstItem="MzU-nx-UcH" firstAttribute="centerX" secondItem="YeF-Ey-NTx" secondAttribute="centerX" id="tfy-jU-AHp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ចំណងដៃ" image="wedding_gift_unselected" selectedImage="wedding_gift_selected" id="Fow-oY-ln6"/>
                     <navigationItem key="navigationItem" title="ចំណងដៃ" id="WPU-C2-isc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnScanQR" destination="MzU-nx-UcH" id="MgH-hT-fra"/>
                         <outlet property="tableView" destination="YjU-Bf-roT" id="TcZ-ID-BOM"/>
                     </connections>
                 </viewController>
@@ -129,7 +117,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qr" width="75" height="75"/>
         <image name="wedding_gift_selected" width="50" height="50"/>
         <image name="wedding_gift_unselected" width="50" height="50"/>
     </resources>

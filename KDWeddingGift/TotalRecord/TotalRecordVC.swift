@@ -14,7 +14,6 @@ final class TotalRecordVC: UIViewController {
 	@IBOutlet weak var lbRielTotal: UILabel!
 	@IBOutlet weak var lbDollarTotal: UILabel!
 	@IBOutlet weak var lbTotalCustomer: UILabel!
-	@IBOutlet weak var btnScanQR: QRScannerButton!
 	
 	let viewModel = TotalRecordViewModel()
 	
@@ -28,13 +27,6 @@ final class TotalRecordVC: UIViewController {
 		viewModel.observeWeddingGiftRealmModel { [weak self] in
 			self?.setTotals()
 			Log.debug("Refresh total")
-		}
-		
-		// Event
-		_ = btnScanQR.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
-			guard let self = self else { return }
-			let vc = QRScannerVC.instantiate()
-			self.present(vc, animated: true)
 		}
 	}
 	

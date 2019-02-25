@@ -8,23 +8,28 @@
 
 import UIKit
 
-final class QRScannerButton: UIButton {
+final class QRScannerButton: DesignableButton {
 	
-	override func awakeFromNib() {
-		super.awakeFromNib()
+	override init(frame: CGRect) {
+		super.init(frame: frame)
 		setUp()
-		
-		// Animation
-		popIn()
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		setUp()
 	}
 	
 	private func setUp() {
-		bounceable = true
+		animateOnTouch = true
 		cornerRadius = bounds.size.width / 2
 		isExclusiveTouch = true
 		adjustsImageWhenHighlighted = false
-		backgroundColor = UIColor.magenta
+		backgroundColor = UIColor.main
 		setImage(#imageLiteral(resourceName: "qr"), for: .normal)
+		
+		// Animation
+		popIn()
 	}
 	
 }
