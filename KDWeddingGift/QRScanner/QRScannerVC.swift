@@ -48,7 +48,9 @@ final class QRScannerVC: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		qrCodeReader.startReading { [weak self] name in
+			// Read success -> Open and pass `name` to Add Form
 			let vc = AddFormVC.instantiate()
+			vc.didFinishAddNewData = self?.didFinishAddNewData
 			self?.present(vc, animated: false) {
 				vc.viewModel.name.value = name
 			}
