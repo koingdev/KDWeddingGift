@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="កត់ចំណងដៃ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu9-4g-xLn">
-                                <rect key="frame" x="87.5" y="40" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="30" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="mW3-jX-Cc2"/>
                                 </constraints>
@@ -30,16 +30,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-SJ-Qar" userLabel="Close Button" customClass="CloseButton" customModule="KDWeddingGift" customModuleProvider="target">
-                                <rect key="frame" x="335" y="30" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-SJ-Qar" userLabel="Close Button" customClass="CloseButton" customModule="KDWeddingGift" customModuleProvider="target">
+                                <rect key="frame" x="330" y="30" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cKy-rH-ajO"/>
-                                    <constraint firstAttribute="width" constant="30" id="v0R-wO-zBf"/>
+                                    <constraint firstAttribute="height" constant="35" id="cKy-rH-ajO"/>
+                                    <constraint firstAttribute="width" constant="35" id="v0R-wO-zBf"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bpJ-El-gIU">
-                                <rect key="frame" x="30" y="100" width="280" height="67.5"/>
+                                <rect key="frame" x="30" y="90" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ឈ្មោះ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-6J-bez">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="21.5"/>
@@ -60,7 +60,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-HT-JbE">
-                                <rect key="frame" x="30" y="182.5" width="280" height="67.5"/>
+                                <rect key="frame" x="30" y="172.5" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (រៀល)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-OG-33N">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="21.5"/>
@@ -84,7 +84,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Ly-3ja">
-                                <rect key="frame" x="30" y="265" width="280" height="67.5"/>
+                                <rect key="frame" x="30" y="255" width="280" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចំនួនទឹកប្រាក់ (ដុល្លា)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-At-ccp">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="21.5"/>
@@ -119,7 +119,7 @@
                                 </state>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ទិន្នន័យបញ្ចូលមិនត្រឹមត្រូវ !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLR-Ub-mE4">
-                                <rect key="frame" x="40" y="392.5" width="295" height="30"/>
+                                <rect key="frame" x="40" y="382.5" width="295" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZIE-uy-Tya"/>
                                 </constraints>
@@ -136,7 +136,7 @@
                             <constraint firstItem="hLR-Ub-mE4" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="40" id="5pV-Qk-hel"/>
                             <constraint firstItem="Omk-HT-JbE" firstAttribute="top" secondItem="bpJ-El-gIU" secondAttribute="bottom" constant="15" id="E5P-Zs-z2g"/>
                             <constraint firstItem="hLR-Ub-mE4" firstAttribute="centerX" secondItem="MiW-q5-pqC" secondAttribute="centerX" id="EX3-Vp-g7i"/>
-                            <constraint firstItem="Iu9-4g-xLn" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="20" id="GIE-aV-JVB"/>
+                            <constraint firstItem="Iu9-4g-xLn" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="GIE-aV-JVB"/>
                             <constraint firstAttribute="trailing" secondItem="hdL-SJ-Qar" secondAttribute="trailing" constant="10" id="Hlp-xf-rPF"/>
                             <constraint firstItem="hdL-SJ-Qar" firstAttribute="top" secondItem="Pit-MU-hyu" secondAttribute="bottom" constant="10" id="OM5-Ab-n9g"/>
                             <constraint firstItem="Omk-HT-JbE" firstAttribute="leading" secondItem="MiW-q5-pqC" secondAttribute="leading" constant="30" id="TnH-sR-J5j"/>

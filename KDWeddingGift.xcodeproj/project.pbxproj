@@ -16,9 +16,12 @@
 		A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */; };
 		A2039BC3220D8FF400C67AAD /* WeddingGiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */; };
 		A2039BC5220DC81700C67AAD /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2039BC4220DC81700C67AAD /* HighlightView.swift */; };
+		A207D9FF2226D0AF0009B948 /* IntX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207D9FD2226D0AF0009B948 /* IntX.swift */; };
+		A207DA002226D0AF0009B948 /* UIBezierPathX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207D9FE2226D0AF0009B948 /* UIBezierPathX.swift */; };
+		A207DA022226D81A0009B948 /* UIColorX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207DA012226D81A0009B948 /* UIColorX.swift */; };
+		A207DA042226D8870009B948 /* UITabBarControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207DA032226D8870009B948 /* UITabBarControllerX.swift */; };
 		A23D1966220F22C9001FFF34 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1965220F22C9001FFF34 /* RealmService.swift */; };
 		A23D1968220F3586001FFF34 /* TotalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */; };
-		A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
 		A2BF1A80220D49920042F77F /* AVQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */; };
 		A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A81220D59890042F77F /* DesignableButton.swift */; };
@@ -63,9 +66,12 @@
 		A2039BC0220D8E4C00C67AAD /* WeddingGiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftViewModel.swift; sourceTree = "<group>"; };
 		A2039BC2220D8FF400C67AAD /* WeddingGiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingGiftTableViewCell.swift; sourceTree = "<group>"; };
 		A2039BC4220DC81700C67AAD /* HighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightView.swift; sourceTree = "<group>"; };
+		A207D9FD2226D0AF0009B948 /* IntX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntX.swift; sourceTree = "<group>"; };
+		A207D9FE2226D0AF0009B948 /* UIBezierPathX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathX.swift; sourceTree = "<group>"; };
+		A207DA012226D81A0009B948 /* UIColorX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorX.swift; sourceTree = "<group>"; };
+		A207DA032226D8870009B948 /* UITabBarControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerX.swift; sourceTree = "<group>"; };
 		A23D1965220F22C9001FFF34 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecordViewModel.swift; sourceTree = "<group>"; };
-		A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCurveTabBar.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
 		A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVQRCodeReader.swift; sourceTree = "<group>"; };
 		A2BF1A81220D59890042F77F /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
@@ -134,7 +140,6 @@
 		A276E582220D1EB30023739E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A276E583220D1EE80023739E /* MiddleCurveTabBar.swift */,
 				A2039BC4220DC81700C67AAD /* HighlightView.swift */,
 			);
 			path = Components;
@@ -208,6 +213,8 @@
 		A2E7F72C220C784E00D047BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A207D9FD2226D0AF0009B948 /* IntX.swift */,
+				A207D9FE2226D0AF0009B948 /* UIBezierPathX.swift */,
 				A2E7F72D220C784E00D047BE /* UITableViewX.swift */,
 				A2E7F72E220C784E00D047BE /* UIScrollViewX.swift */,
 				A2E7F72F220C784E00D047BE /* UIButtonX.swift */,
@@ -216,6 +223,8 @@
 				A2E7F732220C784E00D047BE /* StringX.swift */,
 				A2E7F733220C784E00D047BE /* UIViewX.swift */,
 				A2E7F734220C784E00D047BE /* UIAlertControllerX.swift */,
+				A207DA012226D81A0009B948 /* UIColorX.swift */,
+				A207DA032226D8870009B948 /* UITabBarControllerX.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,11 +418,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A276E584220D1EE80023739E /* MiddleCurveTabBar.swift in Sources */,
 				A23D1966220F22C9001FFF34 /* RealmService.swift in Sources */,
 				A2039BC5220DC81700C67AAD /* HighlightView.swift in Sources */,
 				A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */,
 				A2E7F744220C784E00D047BE /* StringX.swift in Sources */,
+				A207DA042226D8870009B948 /* UITabBarControllerX.swift in Sources */,
 				A2039BB7220D6CFA00C67AAD /* CloseButton.swift in Sources */,
 				A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */,
 				A2E7F745220C784E00D047BE /* UIViewX.swift in Sources */,
@@ -426,6 +435,8 @@
 				A2E7F74E220C784E00D047BE /* Helper.swift in Sources */,
 				A2039BB3220D67D400C67AAD /* AddFormVC.swift in Sources */,
 				A2E7F74C220C784E00D047BE /* WeakObj.swift in Sources */,
+				A207D9FF2226D0AF0009B948 /* IntX.swift in Sources */,
+				A207DA002226D0AF0009B948 /* UIBezierPathX.swift in Sources */,
 				A2E7F74B220C784E00D047BE /* VolumeService.swift in Sources */,
 				A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */,
 				A2E7F747220C784E00D047BE /* KeyboardService.swift in Sources */,
@@ -434,6 +445,7 @@
 				A2E7F757220C97FD00D047BE /* QRScannerVC.swift in Sources */,
 				A2E7F761220C9CEA00D047BE /* TotalRecordVC.swift in Sources */,
 				A2039BB9220D761500C67AAD /* AddFormViewModel.swift in Sources */,
+				A207DA022226D81A0009B948 /* UIColorX.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
 				A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */,
 				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,

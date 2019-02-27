@@ -20,6 +20,8 @@ final class QRScannerVC: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		// Scanner
 		videoLayer = qrCodeReader.videoPreview
 		videoPreview.layer.addSublayer(videoLayer)
 		
@@ -27,13 +29,17 @@ final class QRScannerVC: UIViewController {
 		_ = btnGoToAddForm.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
 			let vc = AddFormVC.instantiate()
 			vc.didFinishAddNewData = self?.didFinishAddNewData
-			self?.present(vc, animated: true)
+			self?.present(vc, animated: false)
 		}
 	}
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
+		
+		// Scanner frame
 		videoLayer.frame = videoPreview.bounds
+		let heartSize = CGSize(width: videoPreview.width * 0.85, height: videoPreview.width * 0.85)
+		videoPreview.addHeartShapeTransparentHole(size: heartSize, fillColor: .main, opacity: 0.4)
 		
 		// Animation
 		btnGoToAddForm.popIn()
@@ -43,7 +49,7 @@ final class QRScannerVC: UIViewController {
 		super.viewWillAppear(animated)
 		qrCodeReader.startReading { [weak self] name in
 			let vc = AddFormVC.instantiate()
-			self?.present(vc, animated: true) {
+			self?.present(vc, animated: false) {
 				vc.viewModel.name.value = name
 			}
 		}
