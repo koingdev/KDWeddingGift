@@ -73,7 +73,8 @@ extension WeddingGiftRealmModel {
 	
 	static func search(name: String, completion: (Results<WeddingGiftRealmModel>) -> Void) {
 		let realm = try! Realm()
-		let result = realm.objects(WeddingGiftRealmModel.self).filter("name CONTAINS %@", name)
+		// case-insensitive
+		let result = realm.objects(WeddingGiftRealmModel.self).filter("name contains[c] %@", name)
 		completion(result)
 	}
 	
