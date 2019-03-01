@@ -28,9 +28,9 @@ final class AddFormViewModel {
 	var dollarAmount = Observable<String?>("")
 	var rielAmount = Observable<String?>("")
 	
-	let realmService: RealmOperation!
+	let realmService: RealmDatabase!
 	
-	init(realmService: RealmOperation = RealmService()) {
+	init(realmService: RealmDatabase = RealmService()) {
 		self.realmService = realmService
 	}
 	

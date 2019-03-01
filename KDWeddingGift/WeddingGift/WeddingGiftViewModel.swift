@@ -15,9 +15,9 @@ final class WeddingGiftViewModel {
 	var filteredDatas: Results<WeddingGiftRealmModel>?
 	let searchName = Observable<String>("")
 	
-	let realmService: RealmOperation!
+	let realmService: RealmDatabase!
 	
-	init(realmService: RealmOperation = RealmService()) {
+	init(realmService: RealmDatabase = RealmService()) {
 		self.realmService = realmService
 	}
 	

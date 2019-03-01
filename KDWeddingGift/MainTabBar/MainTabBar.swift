@@ -23,7 +23,7 @@ class MainTabBar: UITabBarController {
 		super.viewDidLoad()
 		
 		// UI
-		let qrScannerButton = QRScannerButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+		let qrScannerButton = QRScannerButton(frame: CGRect(x: 0, y: 0, width: 65, height: 65))
 		setMiddleButton(qrScannerButton)
 		changeTabBarFontSize()
 		

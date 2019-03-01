@@ -20,6 +20,8 @@
 		A207DA002226D0AF0009B948 /* UIBezierPathX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207D9FE2226D0AF0009B948 /* UIBezierPathX.swift */; };
 		A207DA022226D81A0009B948 /* UIColorX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207DA012226D81A0009B948 /* UIColorX.swift */; };
 		A207DA042226D8870009B948 /* UITabBarControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207DA032226D8870009B948 /* UITabBarControllerX.swift */; };
+		A20F6CC52229725A00CAC8EB /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F6CC42229725A00CAC8EB /* MainTabBar.storyboard */; };
+		A20F6CC722297C5F00CAC8EB /* AutoLayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F6CC622297C5F00CAC8EB /* AutoLayoutBuilder.swift */; };
 		A23D1966220F22C9001FFF34 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1965220F22C9001FFF34 /* RealmService.swift */; };
 		A23D1968220F3586001FFF34 /* TotalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */; };
 		A276E586220D2FD90023739E /* QRScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A276E585220D2FD90023739E /* QRScannerButton.swift */; };
@@ -27,7 +29,6 @@
 		A2BF1A82220D59890042F77F /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF1A81220D59890042F77F /* DesignableButton.swift */; };
 		A2E7F716220C772F00D047BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F715220C772F00D047BE /* AppDelegate.swift */; };
 		A2E7F718220C772F00D047BE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F717220C772F00D047BE /* MainTabBar.swift */; };
-		A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F719220C772F00D047BE /* MainTabBar.storyboard */; };
 		A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71C220C773000D047BE /* Assets.xcassets */; };
 		A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */; };
 		A2E7F73E220C784E00D047BE /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7F72B220C784E00D047BE /* UITextFieldX.swift */; };
@@ -70,6 +71,8 @@
 		A207D9FE2226D0AF0009B948 /* UIBezierPathX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathX.swift; sourceTree = "<group>"; };
 		A207DA012226D81A0009B948 /* UIColorX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorX.swift; sourceTree = "<group>"; };
 		A207DA032226D8870009B948 /* UITabBarControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerX.swift; sourceTree = "<group>"; };
+		A20F6CC42229725A00CAC8EB /* MainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		A20F6CC622297C5F00CAC8EB /* AutoLayoutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutBuilder.swift; sourceTree = "<group>"; };
 		A23D1965220F22C9001FFF34 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A23D1967220F3586001FFF34 /* TotalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRecordViewModel.swift; sourceTree = "<group>"; };
 		A276E585220D2FD90023739E /* QRScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerButton.swift; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		A2E7F712220C772F00D047BE /* KDWeddingGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDWeddingGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E7F715220C772F00D047BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E7F717220C772F00D047BE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		A2E7F71A220C772F00D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainTabBar.storyboard; sourceTree = "<group>"; };
 		A2E7F71C220C773000D047BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2E7F71F220C773000D047BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2E7F721220C773000D047BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -232,15 +234,16 @@
 		A2E7F735220C784E00D047BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */,
+				A20F6CC622297C5F00CAC8EB /* AutoLayoutBuilder.swift */,
 				A2E7F736220C784E00D047BE /* KeyboardService.swift */,
+				A2E7F73A220C784E00D047BE /* VolumeService.swift */,
+				A23D1965220F22C9001FFF34 /* RealmService.swift */,
+				A2BF1A7F220D49920042F77F /* AVQRCodeReader.swift */,
 				A2E7F738220C784E00D047BE /* Log.swift */,
 				A2E7F739220C784E00D047BE /* EmojiString.swift */,
-				A2E7F73A220C784E00D047BE /* VolumeService.swift */,
 				A2E7F73B220C784E00D047BE /* WeakObj.swift */,
 				A2E7F73C220C784E00D047BE /* Queue.swift */,
 				A2E7F73D220C784E00D047BE /* Helper.swift */,
-				A23D1965220F22C9001FFF34 /* RealmService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -249,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E7F717220C772F00D047BE /* MainTabBar.swift */,
-				A2E7F719220C772F00D047BE /* MainTabBar.storyboard */,
+				A20F6CC42229725A00CAC8EB /* MainTabBar.storyboard */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -357,10 +360,10 @@
 				A2E7F754220C93EB00D047BE /* WeddingGiftVC.storyboard in Resources */,
 				A2E7F720220C773000D047BE /* LaunchScreen.storyboard in Resources */,
 				A2E7F759220C981500D047BE /* QRScannerVC.storyboard in Resources */,
+				A20F6CC52229725A00CAC8EB /* MainTabBar.storyboard in Resources */,
 				A2E7F763220C9CFC00D047BE /* TotalRecordVC.storyboard in Resources */,
 				A2E7F71D220C773000D047BE /* Assets.xcassets in Resources */,
 				A2039BB5220D67DD00C67AAD /* AddFormVC.storyboard in Resources */,
-				A2E7F71B220C772F00D047BE /* MainTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +449,7 @@
 				A2E7F761220C9CEA00D047BE /* TotalRecordVC.swift in Sources */,
 				A2039BB9220D761500C67AAD /* AddFormViewModel.swift in Sources */,
 				A207DA022226D81A0009B948 /* UIColorX.swift in Sources */,
+				A20F6CC722297C5F00CAC8EB /* AutoLayoutBuilder.swift in Sources */,
 				A2E7F749220C784E00D047BE /* Log.swift in Sources */,
 				A2039BC1220D8E4C00C67AAD /* WeddingGiftViewModel.swift in Sources */,
 				A2E7F73F220C784E00D047BE /* UITableViewX.swift in Sources */,
@@ -461,14 +465,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A2E7F719220C772F00D047BE /* MainTabBar.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2E7F71A220C772F00D047BE /* Base */,
-			);
-			name = MainTabBar.storyboard;
-			sourceTree = "<group>";
-		};
 		A2E7F71E220C773000D047BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
