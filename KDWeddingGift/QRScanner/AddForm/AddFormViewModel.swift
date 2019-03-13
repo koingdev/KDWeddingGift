@@ -28,9 +28,9 @@ final class AddFormViewModel {
 	var dollarAmount = Observable<String?>("")
 	var rielAmount = Observable<String?>("")
 	
-	let realmService: RealmDatabase!
+	private let realmService: RealmService!
 	
-	init(realmService: RealmDatabase = RealmService()) {
+	init(realmService: RealmService = RealmService()) {
 		self.realmService = realmService
 	}
 	
@@ -88,9 +88,8 @@ final class AddFormViewModel {
 	func addNewWeddingGift(completion: (Bool) -> Void) {
 		if isFormValid() {
 			let object = WeddingGiftRealmModel(name: getName, dollarAmount: getDollarAmount, rielAmount: getRielAmount)
-			realmService.write(object: object) {
-				completion(true)
-			}
+			realmService.add(object: object)
+			completion(true)
 		} else {
 			completion(false)
 		}

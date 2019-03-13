@@ -22,9 +22,9 @@ final class TotalRecordViewModel {
 		return "\(WeddingGiftRealmModel.getTotalCustomer()) នាក់"
 	}
 	
-	let realmService: RealmDatabase!
+	private let realmService: RealmService!
 	
-	init(realmService: RealmDatabase = RealmService()) {
+	init(realmService: RealmService = RealmService()) {
 		self.realmService = realmService
 	}
 	

@@ -15,9 +15,9 @@ final class WeddingGiftViewModel {
 	var filteredDatas: Results<WeddingGiftRealmModel>?
 	let searchName = Observable<String>("")
 	
-	let realmService: RealmDatabase!
+	private let realmService: RealmService!
 	
-	init(realmService: RealmDatabase = RealmService()) {
+	init(realmService: RealmService = RealmService()) {
 		self.realmService = realmService
 	}
 	
@@ -30,7 +30,8 @@ final class WeddingGiftViewModel {
 	}
 	
 	func delete(object: Object, completion: () -> Void) {
-		realmService.delete(object: object, completion: completion)
+		realmService.delete(object: object)
+		completion()
 	}
 	
 	func search(name: String, completion: () -> Void) {
